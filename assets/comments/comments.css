@@ -1,0 +1,59 @@
+.wgcr-comments{--wgcr-c-accent:#1F6FBF;--wgcr-c-text:#1F2937;--wgcr-c-muted:#5B6472;--wgcr-c-line:#E5E7EB;--wgcr-c-soft:#F3F6FB;display:grid;gap:32px;max-width:760px;margin-inline:auto;color:var(--wgcr-c-text);line-height:1.9;box-sizing:border-box}
+.wgcr-comments *,.wgcr-comments *::before,.wgcr-comments *::after{box-sizing:border-box}
+.wgcr-comments-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.wgcr-comments-title,.wgcr-comments-form-title{margin:0 0 18px;font-size:22px;line-height:1.5;font-weight:800;color:var(--wgcr-c-text)}
+.wgcr-comments-count{display:inline-block;min-width:1.8em;padding:0 .5em;border-radius:999px;background:var(--wgcr-c-soft);color:var(--wgcr-c-accent);font-size:.7em;font-weight:700;text-align:center;vertical-align:middle}
+.wgcr-comments-list,.wgcr-comments-list .children{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.wgcr-comments-list .children{margin-block-start:14px;margin-inline-start:28px}
+.wgcr-comments-list>li,.wgcr-comments-list .children>li{margin:0;padding:0;list-style:none}
+.wgcr-comment{padding:18px 20px;background:#fff;border:1px solid var(--wgcr-c-line);border-radius:12px}
+.wgcr-comment-head{display:flex;align-items:center;gap:12px;margin-block-end:10px}
+.wgcr-comments .wgcr-comment-head .wgcr-comments-avatar{display:block;flex:none;position:static;float:none;border-radius:50%;max-width:none;height:auto;aspect-ratio:1/1;object-fit:cover}
+.wgcr-comment-meta{display:grid;gap:2px;min-width:0}
+.wgcr-comment-author,.wgcr-comment-author a{font-weight:700;color:var(--wgcr-c-text);text-decoration:none;overflow-wrap:anywhere}
+.wgcr-comment-date{font-size:13px;color:var(--wgcr-c-muted)}
+.wgcr-comment-text{font-size:15px;overflow-wrap:anywhere}
+.wgcr-comment-text>:first-child{margin-block-start:0}
+.wgcr-comment-text>:last-child{margin-block-end:0}
+.wgcr-comment-foot{margin-block-start:10px}
+.wgcr-comment-reply a{display:inline-block;padding:2px 12px;border-radius:999px;background:var(--wgcr-c-soft);color:var(--wgcr-c-accent);font-size:13px;font-weight:700;text-decoration:none}
+.wgcr-comment-reply a:hover,.wgcr-comment-reply a:focus-visible{background:var(--wgcr-c-accent);color:#fff}
+.wgcr-comments-pending{margin:0 0 10px;padding:6px 12px;border-radius:8px;background:#FEF6E7;color:#8A5A00;font-size:13px}
+.wgcr-comments-empty,.wgcr-comments-notice,.wgcr-comments-loggedin{margin:0;padding:12px 16px;border-radius:10px;background:var(--wgcr-c-soft);color:var(--wgcr-c-muted)}
+.wgcr-comments-notice a,.wgcr-comments-loggedin a{color:var(--wgcr-c-accent);font-weight:700}
+.wgcr-comments-anchor{display:block;height:0;overflow:hidden}
+.wgcr-comments-pagination{margin-block-start:20px}
+.wgcr-comments-pages{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.wgcr-comments-pages li{margin:0;padding:0}
+.wgcr-comments-page,.wgcr-comments-gap{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:38px;padding:0 12px;border-radius:8px;font-size:14px;line-height:1}
+.wgcr-comments-page{background:var(--wgcr-c-soft);color:var(--wgcr-c-text);text-decoration:none}
+a.wgcr-comments-page:hover,a.wgcr-comments-page:focus-visible{background:var(--wgcr-c-accent);color:#fff}
+.wgcr-comments-page.is-current{background:var(--wgcr-c-accent);color:#fff;font-weight:700}
+.wgcr-comments-respond{padding:24px;background:#fff;border:1px solid var(--wgcr-c-line);border-radius:14px}
+.wgcr-comments-form{display:grid;gap:16px}
+.wgcr-comments-form>*{margin:0}
+.wgcr-comments-field{display:grid;gap:6px}
+.wgcr-comments--fields-row .wgcr-comments-form{grid-template-columns:repeat(3,minmax(0,1fr))}
+.wgcr-comments--fields-row .wgcr-comments-form>:not(.comment-form-author):not(.comment-form-email):not(.comment-form-url){grid-column:1/-1}
+.wgcr-comments-field label{font-size:14px;font-weight:700;color:var(--wgcr-c-text)}
+.wgcr-comments-field .required{color:#C0392B}
+.wgcr-comments-input{display:block;width:100%;margin:0;padding:10px 14px;background:#fff;border:1px solid #7C8799;border-radius:10px;color:var(--wgcr-c-text);font:inherit;font-size:15px;line-height:1.7;box-shadow:none}
+textarea.wgcr-comments-input{resize:vertical;min-height:120px}
+.wgcr-comments-input:focus{border-color:var(--wgcr-c-accent);outline:2px solid transparent;box-shadow:0 0 0 3px rgba(31,111,191,.25)}
+.wgcr-comments-input:focus-visible{outline:2px solid var(--wgcr-c-accent);outline-offset:1px}
+.wgcr-comments-input:user-invalid{border-color:#C0392B}
+.wgcr-comments-cookies{display:flex;align-items:flex-start;gap:8px}
+.wgcr-comments-cookies input{margin-block-start:.55em;accent-color:var(--wgcr-c-accent)}
+.wgcr-comments-cookies label{font-weight:400;color:var(--wgcr-c-muted)}
+.wgcr-comments-note{font-size:14px;color:var(--wgcr-c-muted)}
+.wgcr-comments-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.wgcr-comments-submit{appearance:none;-webkit-appearance:none;margin:0;padding:11px 28px;border:1px solid var(--wgcr-c-accent);border-radius:10px;background:var(--wgcr-c-accent);color:#fff;font:inherit;font-size:15px;font-weight:700;line-height:1.5;cursor:pointer;box-shadow:none;text-shadow:none;text-transform:none;letter-spacing:normal;transition:background-color .2s ease,border-color .2s ease,transform .2s ease}
+.wgcr-comments-submit:hover,.wgcr-comments-submit:focus-visible{background:#185A9D;border-color:#185A9D;color:#fff}
+.wgcr-comments-submit:focus-visible{outline:2px solid var(--wgcr-c-accent);outline-offset:2px}
+.wgcr-comments-submit:disabled{opacity:.55;cursor:not-allowed}
+.wgcr-comments-cancel a{font-size:13px;font-weight:400;color:var(--wgcr-c-accent)}
+.wgcr-comments-respond .comment-reply-title small{margin-inline-start:10px}
+.wgcr-comments a:focus-visible{outline:2px solid var(--wgcr-c-accent);outline-offset:2px;border-radius:4px}
+@media (max-width:720px){.wgcr-comments--fields-row .wgcr-comments-form{grid-template-columns:minmax(0,1fr)}.wgcr-comments-respond{padding:18px}.wgcr-comments-list .children{margin-inline-start:14px}}
+@media (prefers-reduced-motion:reduce){.wgcr-comments-submit{transition:none}}
+@media (forced-colors:active){.wgcr-comment,.wgcr-comments-respond,.wgcr-comments-input,.wgcr-comments-submit,.wgcr-comments-page{border:1px solid CanvasText}.wgcr-comments-page.is-current{border-color:Highlight;outline:2px solid Highlight}.wgcr-comments-input:focus-visible,.wgcr-comments-submit:focus-visible,.wgcr-comments a:focus-visible{outline:2px solid Highlight}}

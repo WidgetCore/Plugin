@@ -95,12 +95,16 @@ if ( ! function_exists( 'wgcr_faq_base_js' ) ) {
 				'  } else {',
 				'    init();',
 				'  }',
-				'  window.addEventListener(\'load\', init);',
-				'  window.addEventListener(\'resize\', function () {',
+				'  function refit() {',
 				'    document.querySelectorAll(\'.wgcr-faq-item.open .wgcr-faq-a\').forEach(function (a) {',
 				'      a.style.maxHeight = a.scrollHeight + \'px\';',
 				'    });',
+				'  }',
+				'  window.addEventListener(\'load\', function () {',
+				'    init();',
+				'    refit();',
 				'  });',
+				'  window.addEventListener(\'resize\', refit);',
 				'})();',
 			)
 		);
@@ -123,6 +127,8 @@ add_action( 'wp_enqueue_scripts', 'wgcr_faq_register_assets', 5 );
 if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Base' ) ) {
 
 	class WGCR_FAQ_Widget extends \Elementor\Widget_Base {
+
+		use WGCR_Size_Controls;
 
 		public function get_name() { return 'wgcr-faq'; }
 		public function get_title() { return esc_html__( 'سوالات متداول - FAQ', 'widgetcore' ); }
@@ -256,7 +262,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 			$this->end_controls_section();
 
 			$this->start_controls_section( 'sty_layout', array( 'label' => esc_html__( 'طرح کلی', 'widgetcore' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ) );
-			$this->add_control( 'max_width', array(
+			$this->wgcr_size_control( 'max_width', array(
 				'label'      => esc_html__( 'حداکثر عرض', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem' ),
@@ -310,7 +316,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 				),
 				'selectors'            => array( '{{WRAPPER}} .wgcr-faq' => '{{VALUE}}' ),
 			) );
-			$this->add_control( 'items_gap', array(
+			$this->wgcr_size_control( 'items_gap', array(
 				'label'      => esc_html__( 'فاصله بین کارت‌ها', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
@@ -382,7 +388,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 			) );
 			$this->end_controls_tab();
 			$this->end_controls_tabs();
-			$this->add_control( 'glass_blur', array(
+			$this->wgcr_size_control( 'glass_blur', array(
 				'label'      => esc_html__( 'میزان تاری شیشه‌ای', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
@@ -398,7 +404,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 				),
 				'selectors'  => array( '{{WRAPPER}} .wgcr-faq-item' => 'backdrop-filter:blur({{SIZE}}{{UNIT}});-webkit-backdrop-filter:blur({{SIZE}}{{UNIT}});' ),
 			) );
-			$this->add_control( 'box_radius', array(
+			$this->wgcr_size_control( 'box_radius', array(
 				'label'      => esc_html__( 'گردی گوشه‌ها', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px' ),
@@ -480,7 +486,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 				'label'    => esc_html__( 'کادر ردیف عنوان', 'widgetcore' ),
 				'selector' => '{{WRAPPER}} .wgcr-faq-q',
 			) );
-			$this->add_control( 'q_row_radius', array(
+			$this->wgcr_size_control( 'q_row_radius', array(
 				'label'      => esc_html__( 'گردی گوشه‌های ردیف عنوان', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
@@ -496,7 +502,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 				),
 				'selectors'  => array( '{{WRAPPER}} .wgcr-faq-q' => 'border-radius:{{SIZE}}{{UNIT}};' ),
 			) );
-			$this->add_control( 'q_padding', array(
+			$this->wgcr_size_control( 'q_padding', array(
 				'label'      => esc_html__( 'پدینگ', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px' ),
@@ -561,7 +567,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 				'label'    => esc_html__( 'کادر', 'widgetcore' ),
 				'selector' => '{{WRAPPER}} .wgcr-faq-a',
 			) );
-			$this->add_control( 'a_radius', array(
+			$this->wgcr_size_control( 'a_radius', array(
 				'label'      => esc_html__( 'گردی گوشه‌ها', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
@@ -577,7 +583,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 				),
 				'selectors'  => array( '{{WRAPPER}} .wgcr-faq-a' => 'border-radius:{{SIZE}}{{UNIT}};' ),
 			) );
-			$this->add_control( 'a_padding', array(
+			$this->wgcr_size_control( 'a_padding', array(
 				'label'      => esc_html__( 'پدینگ', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px' ),
@@ -594,7 +600,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 			$this->end_controls_section();
 
 			$this->start_controls_section( 'sty_icon', array( 'label' => esc_html__( 'آیکون', 'widgetcore' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ) );
-			$this->add_control( 'ic_gap', array(
+			$this->wgcr_size_control( 'ic_gap', array(
 				'label'      => esc_html__( 'فاصله از متن', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
@@ -610,7 +616,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 				),
 				'selectors'  => array( '{{WRAPPER}} .wgcr-faq-q' => 'gap:{{SIZE}}{{UNIT}};' ),
 			) );
-			$this->add_control( 'ic_box', array(
+			$this->wgcr_size_control( 'ic_box', array(
 				'label'      => esc_html__( 'اندازه باکس', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
@@ -626,7 +632,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 				),
 				'selectors'  => array( '{{WRAPPER}} .wgcr-faq-ic' => 'width:{{SIZE}}{{UNIT}};height:{{SIZE}}{{UNIT}};' ),
 			) );
-			$this->add_control( 'ic_size', array(
+			$this->wgcr_size_control( 'ic_size', array(
 				'label'      => esc_html__( 'اندازه آیکون', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
@@ -645,7 +651,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 					'{{WRAPPER}} .wgcr-faq-ic i'   => 'font-size:{{SIZE}}{{UNIT}};',
 				),
 			) );
-			$this->add_control( 'ic_radius', array(
+			$this->wgcr_size_control( 'ic_radius', array(
 				'label'      => esc_html__( 'گردی باکس', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),

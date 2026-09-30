@@ -315,7 +315,7 @@
       }
       var count = options().length;
       if (!count) {
-        status.textContent = t('noResults', 'نتیجه‌ای برای «%s» پیدا نشد.').replace('%s', q);
+        status.textContent = t('noResults', 'نتیجه‌ای برای «%s» پیدا نشد.').replace('%s', function () { return q; });
       } else {
         status.textContent = t('found', 'تعداد نتایج: %d').replace('%d', String(Math.max(count, total)));
       }

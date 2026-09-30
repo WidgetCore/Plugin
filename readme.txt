@@ -1,27 +1,32 @@
 === WidgetCore ===
 Contributors: mohamadjavadkarimi
-Tags: elementor, faq, accordion, live search, ajax search
+Tags: elementor, faq, accordion, live search, comments
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.0.7
+Stable tag: 0.0.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Free Elementor widgets: an accessible FAQ accordion with FAQPage schema and an instant live search with a shortcode.
+Free Elementor widgets: an accessible FAQ accordion, an instant live search with a shortcode, and a comments list with form.
 
 == Description ==
 
-WidgetCore adds a new widget category to the Elementor panel with two widgets:
+WidgetCore adds a new widget category to the Elementor panel with three widgets:
 
 * **FAQ** (`wgcr-faq`) – accordion or toggle mode, plus / chevron / custom icon, H2–H4 or DIV question tags, automatic FAQPage JSON-LD schema, full ARIA (button + region), and complete style controls.
 * **Live Search** (`wgcr-search`) – instant results while typing (REST API, debounced), keyboard navigation (Arrow Up/Down, Enter, Escape), combobox/listbox accessibility, thumbnails and excerpts, a "view all results" link, and multiple instances per page. Works for posts, courses or any public custom post type. Includes a `display_mode` option ("modal" dropdown under the input or "page" inline region inside the widget container), query filters (terms include/exclude, date range, order, sticky posts, query ID hook), pagination (numbers, previous/next, load more, infinite scroll), masonry / equal-height layouts and optional Elementor templates for each result.
+* **Comments** (`wgcr-comments`) – the approved comments of the current post with replies, optional pagination and avatars, plus a configurable comment form: choose the fields, labels, required state, notes and layout, with a full Style tab. The form posts to WordPress' own comment handler, so moderation, spam checks and the login requirement from Settings → Discussion keep working. The widget can make name and email optional and can only make login stricter. It stores nothing of its own and loads no script.
 
 The live search is also available as a shortcode:
 
 `[wgcr_search source="post" placeholder="Search articles…" limit="5"]`
 
-The plugin has no settings page, stores no options, and makes no external requests.
+The comments list and form are available as a shortcode too:
+
+`[wgcr_comments form="yes" list="yes" per_page="20"]`
+
+The plugin has no settings page and stores no options. The widgets make no external requests of their own; the only server-side request is the update check against the GitHub API. If the Comments widget shows avatars, WordPress loads them from Gravatar in the visitor's browser; set the widget's avatar option to hide them.
 
 = Translations =
 
@@ -44,6 +49,10 @@ In the Query section choose "Custom post type" as the Source and enter the slug 
 
 `source` (post type slug, default `post`), `placeholder`, `limit` (1–50, default `5`), `columns` (1–6, page mode only), `masonry` / `equal_height` (yes/no, page mode only), `thumb` (yes/no), `excerpt` (yes/no), `all` (text of the "view all" link), `template` (Elementor template ID, default `0`), `mode` (`modal` or `page`), `orderby` (`relevance`, `date`, `title`, `author`, `rand`, `menu_order`), `order` (`DESC`/`ASC`), `date` (`all`, `week`, `month`, `year`), `terms` (comma-separated `taxonomy:term_id`), `terms_op` (`exclude`/`include`), `ignore_sticky` (yes/no), `query_id`, `pagination` (`none`, `numbers`, `prev_next`, `load_on_click`, `load_on_scroll`), `spacer` (yes/no), `more_text`, `more_icon` (yes/no), `more_id` and `no_more` (custom "no more posts" message).
 
+= Which shortcode attributes does [wgcr_comments] accept? =
+
+Every Comments widget control has a matching attribute with the same id, for example `form`, `list`, `title`, `author`, `email`, `url`, `cookies`, `author_required`, `email_required`, `rows`, `submit`, `per_page` (0–100), `order` (`wp`, `asc`, `desc`), `avatar` (`wp`, `yes`, `no`), `avatar_size` (16–128), `reply`, `login_only` and `post` (a post ID). Invalid values fall back to the default. Only one comment form is printed per page.
+
 = Does the plugin add a REST endpoint? =
 
 Yes: `GET /wp-json/wgcr/v1/search?q=…&type=post&limit=5`. It is read-only, returns only published, non-password-protected content of public post types, requires at least 2 characters and returns at most 50 items per page. Optional parameters: `page` (adds `X-WP-Total` / `X-WP-TotalPages` headers), `orderby`, `order`, `date`, `terms`, `terms_op`, `ignore_sticky`, `query_id` and `template`. Developers can adjust the query with the `wgcr_search_query_args` filter (or `wgcr_search_query_args/{query_id}` for a single widget).
@@ -57,6 +66,14 @@ The plugin header declares `Update URI: https://github.com/WidgetCore/Plugin`, s
 Every released ZIP increases the version by exactly one step: `0.0.1` → `0.0.2` … `0.0.9` → `0.1.0` → `0.1.1` … `0.9.9` → `1.0.0`. The changelog below lists every step.
 
 == Changelog ==
+
+= 0.0.8 =
+* New Comments widget (`wgcr-comments`) and `[wgcr_comments]` shortcode: approved comments of the current post with replies, optional pagination and avatars, a configurable comment form (fields, labels, required state, notes, layout) and a full Style tab. Comments are sent to WordPress' own handler, so moderation, spam checks and login requirements keep working; the widget can make name and email optional and can only make login stricter. No option, table, cookie or script of its own.
+* Comments: when the widget or shortcode prints for a post, the theme's own comment list and form (classic `comments_template()` and block-theme comments blocks) are no longer printed next to it.
+* Comments: new Style controls — avatar width, avatar distance from the comment card, per-corner avatar radius, and the author name's and the date's distance from the avatar.
+* Comments: a reply now lives inside its parent comment's card, and "Reply indent and spacing" is a four-side margin relative to that card. The logged-in user text has its own Messages controls (text with a `{name}` placeholder, profile and log-out links) and Style section. The avatar radius, distance and position are no longer overridden by theme rules such as `#comments .comment .avatar`.
+* All widgets: every size control in the Style tab (widths, heights, padding, margins, gaps, radius, icon and avatar sizes) is responsive for desktop, tablet and mobile and has Normal and Hover tabs.
+* Live Search: the shortcode and the widget read their defaults from one place.
 
 = 0.0.7 =
 * Updates straight from the GitHub repository (`Update URI` + WordPress core hooks, no library): latest release of `WidgetCore/Plugin`, release asset `widgetcore.zip`, "View details" changelog from the release notes, native per-plugin auto-update toggle, a "Check for updates" action link with a result notice, optional `WGCR_GITHUB_TOKEN` constant. Removing the header later switches updates to WordPress.org.

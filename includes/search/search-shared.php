@@ -79,9 +79,9 @@ if ( ! function_exists( 'wgcr_search_sanitize_terms' ) ) {
 	}
 }
 
-if ( ! function_exists( 'wgcr_search_normalize_args' ) ) {
-	function wgcr_search_normalize_args( $args ) {
-		$d = array(
+if ( ! function_exists( 'wgcr_search_defaults' ) ) {
+	function wgcr_search_defaults() {
+		return array(
 			'source'        => 'post',
 			'placeholder'   => '',
 			'limit'         => 5,
@@ -107,6 +107,12 @@ if ( ! function_exists( 'wgcr_search_normalize_args' ) ) {
 			'more_id'       => '',
 			'no_more'       => '',
 		);
+	}
+}
+
+if ( ! function_exists( 'wgcr_search_normalize_args' ) ) {
+	function wgcr_search_normalize_args( $args ) {
+		$d    = wgcr_search_defaults();
 		$args = wp_parse_args( is_array( $args ) ? $args : array(), $d );
 
 		$bool = static function ( $v ) {
@@ -342,32 +348,7 @@ add_shortcode( 'wgcr_search', 'wgcr_search_shortcode' );
 if ( ! function_exists( 'wgcr_search_shortcode' ) ) {
 	function wgcr_search_shortcode( $atts ) {
 		$atts = shortcode_atts(
-			array(
-				'source'        => 'post',
-				'placeholder'   => '',
-				'limit'         => 5,
-				'columns'       => 1,
-				'masonry'       => 'no',
-				'equal_height'  => 'no',
-				'thumb'         => 'yes',
-				'excerpt'       => 'yes',
-				'all'           => '',
-				'template'      => 0,
-				'mode'          => 'modal',
-				'orderby'       => 'relevance',
-				'order'         => 'DESC',
-				'date'          => 'all',
-				'terms'         => '',
-				'terms_op'      => 'exclude',
-				'ignore_sticky' => 'yes',
-				'query_id'      => '',
-				'pagination'    => 'none',
-				'spacer'        => 'no',
-				'more_text'     => '',
-				'more_icon'     => 'yes',
-				'more_id'       => '',
-				'no_more'       => '',
-			),
+			wgcr_search_defaults(),
 			$atts,
 			'wgcr_search'
 		);

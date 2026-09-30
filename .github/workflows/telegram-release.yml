@@ -15,10 +15,10 @@ jobs:
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           format: markdown
           message: |
-            🚀 *نسخه جدید منتشر شد!*
-            
-            📦 *پروژه:* ${{ github.repository }}
-            🏷 *نسخه (Tag):* `${{ github.event.release.tag_name }}`
-            📝 *عنوان:* ${{ github.event.release.name }}
+            🚀 نسخه جدید *WidgetCore* منتشر شد !
+            🏷 *نسخه :* `${{ github.event.release.tag_name }}`
+            📝 *تغییرات نسخه :*
+            ${{ github.event.release.body }}
             
             🔗 [مشاهده و دانلود نسخه جدید](${{ github.event.release.html_url }})
+            🌐 [مشاهده مستندات آنلاین](https://docs.widgetcore.ir/changelog/)

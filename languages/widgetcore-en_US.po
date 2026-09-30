@@ -11,6 +11,138 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: widgetcore\n"
 
+#: includes/comments/comments-policy.php:35
+msgid "خطا در ثبت دیدگاه"
+msgstr "Comment submission error"
+
+#: includes/comments/comments-policy.php:52
+msgid "لطفاً فیلدهای الزامی را پر کنید."
+msgstr "Please fill in the required fields."
+
+#: includes/comments/comments-policy.php:55
+msgid "نشانی ایمیل معتبر وارد کنید."
+msgstr "Please enter a valid email address."
+
+#: includes/comments/comments-shared.php:12
+msgid "ارسال دیدگاه"
+msgstr "Leave a comment"
+
+#: includes/comments/comments-shared.php:14
+msgid "دیدگاه‌ها"
+msgstr "Comments"
+
+#: includes/comments/comments-shared.php:21 widgets/class-comments-widget.php:269
+msgid "نام"
+msgstr "Name"
+
+#: includes/comments/comments-shared.php:25 widgets/class-comments-widget.php:270
+msgid "ایمیل"
+msgstr "Email"
+
+#: includes/comments/comments-shared.php:28 widgets/class-comments-widget.php:271
+msgid "وب‌سایت"
+msgstr "Website"
+
+#: includes/comments/comments-shared.php:31
+msgid "نام، ایمیل و وب‌سایت من در این مرورگر ذخیره شود تا دفعهٔ بعد که دیدگاه می‌نویسم دوباره وارد نکنم."
+msgstr "Save my name, email and website in this browser so I don't have to enter them next time I comment."
+
+#: includes/comments/comments-shared.php:32
+msgid "دیدگاه شما"
+msgstr "Your comment"
+
+#: includes/comments/comments-shared.php:41
+msgid "ثبت دیدگاه"
+msgstr "Post comment"
+
+#: includes/comments/comments-shared.php:42
+msgid "لغو پاسخ"
+msgstr "Cancel reply"
+
+#: includes/comments/comments-shared.php:50
+msgid "پاسخ دادن"
+msgstr "Reply"
+
+#: includes/comments/comments-shared.php:51
+msgid "هنوز دیدگاهی ثبت نشده است."
+msgstr "No comments have been posted yet."
+
+#: includes/comments/comments-shared.php:52
+msgid "دیدگاه‌ها برای این مطلب بسته شده است."
+msgstr "Comments are closed for this post."
+
+#: includes/comments/comments-shared.php:53
+msgid "برای ثبت دیدگاه باید وارد شوید."
+msgstr "You must be logged in to post a comment."
+
+#: includes/comments/comments-shared.php:55
+msgid "با نام {name} وارد شده‌اید."
+msgstr "Logged in as {name}."
+
+#: includes/comments/comments-shared.php:57
+msgid "ویرایش نمایه"
+msgstr "Edit profile"
+
+#: includes/comments/comments-shared.php:59
+msgid "خروج"
+msgstr "Log out"
+
+#: includes/comments/comments-shared.php:60
+msgid "دیدگاه شما در انتظار تأیید است."
+msgstr "Your comment is awaiting moderation."
+
+#: includes/comments/comments-shared.php:211
+msgid "مریم احمدی"
+msgstr "Maryam Ahmadi"
+
+#: includes/comments/comments-shared.php:211
+msgid "این یک دیدگاه نمونه است تا ظاهر فهرست را در ویرایشگر ببینید."
+msgstr "This is a sample comment so you can preview the list in the editor."
+
+#: includes/comments/comments-shared.php:212
+msgid "علی رضایی"
+msgstr "Ali Rezaei"
+
+#: includes/comments/comments-shared.php:212
+msgid "این یک پاسخ نمونه به دیدگاه بالاست."
+msgstr "This is a sample reply to the comment above."
+
+#: includes/comments/comments-shared.php:213
+msgid "سارا کریمی"
+msgstr "Sara Karimi"
+
+#: includes/comments/comments-shared.php:213
+msgid "دیدگاه نمونهٔ دیگری برای پیش‌نمایش."
+msgstr "Another sample comment for the preview."
+
+#: includes/comments/comments-shared.php:338
+msgid "صفحه‌بندی دیدگاه‌ها"
+msgstr "Comments pagination"
+
+#: includes/comments/comments-shared.php:341 includes/search/search-shared.php:20
+msgid "قبلی"
+msgstr "Previous"
+
+#. translators: %d: page number.
+#: includes/comments/comments-shared.php:354 includes/search/search-shared.php:23
+#, php-format
+msgid "صفحه %d"
+msgstr "Page %d"
+
+#: includes/comments/comments-shared.php:361 includes/search/search-shared.php:21
+msgid "بعدی"
+msgstr "Next"
+
+#: includes/comments/comments-shared.php:459
+msgid "ورود"
+msgstr "Log in"
+
+#. translators: %s: name of the comment author being replied to.
+#: includes/comments/comments-shared.php:469
+#, php-format
+msgid "پاسخ به %s"
+msgstr "Reply to %s"
+
 #: includes/search/rest-search.php:157
 msgid "حداقل ۲ کاراکتر وارد کنید."
 msgstr "Please enter at least 2 characters."
@@ -32,759 +164,1073 @@ msgstr "Results: %d"
 msgid "خطا در دریافت نتایج. دوباره تلاش کنید."
 msgstr "Could not load results. Please try again."
 
-#: includes/search/search-shared.php:20
-msgid "قبلی"
-msgstr "Previous"
-
-#: includes/search/search-shared.php:21
-msgid "بعدی"
-msgstr "Next"
-
-#. translators: %d: page number.
-#: includes/search/search-shared.php:23
-#, php-format
-msgid "صفحه %d"
-msgstr "Page %d"
-
 #. translators: 1: current page number, 2: total number of pages.
 #: includes/search/search-shared.php:25
 #, php-format
 msgid "صفحه %1$d از %2$d"
 msgstr "Page %1$d of %2$d"
 
-#: includes/search/search-shared.php:124 widgets/class-search-widget.php:779
+#: includes/search/search-shared.php:130 widgets/class-search-widget.php:781
 msgid "جستجو در دوره‌ها…"
 msgstr "Search courses…"
 
-#: includes/search/search-shared.php:124 widgets/class-search-widget.php:103 widgets/class-search-widget.php:779
+#: includes/search/search-shared.php:130 widgets/class-search-widget.php:105 widgets/class-search-widget.php:781
 msgid "جستجو در مقالات…"
 msgstr "Search articles…"
 
-#: includes/search/search-shared.php:146 widgets/class-search-widget.php:125 widgets/class-search-widget.php:780
+#: includes/search/search-shared.php:152 widgets/class-search-widget.php:127 widgets/class-search-widget.php:782
 msgid "نمایش همه نتایج"
 msgstr "View all results"
 
-#: includes/search/search-shared.php:158 widgets/class-search-widget.php:377 widgets/class-search-widget.php:806
+#: includes/search/search-shared.php:164 widgets/class-search-widget.php:379 widgets/class-search-widget.php:808
 msgid "مشاهده مقالات بیشتر"
 msgstr "View more articles"
 
-#: includes/search/search-shared.php:310 widgets/class-search-widget.php:807
+#: includes/search/search-shared.php:316 widgets/class-search-widget.php:809
 msgid "نوشته‌ی بیشتری موجود نیست."
 msgstr "No more posts to show."
 
-#: includes/search/search-shared.php:323 widgets/class-search-widget.php:822
+#: includes/search/search-shared.php:329 widgets/class-search-widget.php:824
 msgid "نتایج جستجو"
 msgstr "Search results"
 
-#: includes/search/search-shared.php:327 widgets/class-search-widget.php:826
+#: includes/search/search-shared.php:333 widgets/class-search-widget.php:828
 msgid "صفحه‌بندی نتایج"
 msgstr "Results pagination"
+
+#: includes/style/style-controls.php:33 widgets/class-comments-widget.php:217 widgets/class-comments-widget.php:408 widgets/class-faq-widget.php:689
+msgid "عادی"
+msgstr "Normal"
+
+#: includes/style/style-controls.php:36 widgets/class-comments-widget.php:217
+msgid "هاور"
+msgstr "Hover"
 
 #: includes/update/github-updater.php:143
 msgid "بررسی به‌روزرسانی"
 msgstr "Check for updates"
 
-#: includes/update/github-updater.php:170
+#: includes/update/github-updater.php:174
 msgid "نسخه‌ی جدیدی از WidgetCore موجود است؛ می‌توانید همین‌جا به‌روزرسانی کنید."
 msgstr "A new version of WidgetCore is available; you can update right here."
 
-#: includes/update/github-updater.php:172
+#: includes/update/github-updater.php:176
 msgid "WidgetCore به‌روز است؛ نسخه‌ی نصب‌شده آخرین نسخه‌ی منتشرشده است."
 msgstr "WidgetCore is up to date; the installed version is the latest release."
 
-#: widgetcore.php:88
+#: widgetcore.php:92
 msgid "ویجت‌های WidgetCore"
 msgstr "WidgetCore"
 
-#: widgets/class-faq-widget.php:128
-msgid "سوالات متداول - FAQ"
-msgstr "FAQ"
+#: widgets/class-comments-widget.php:14
+msgid "دیدگاه‌ها - Comments"
+msgstr "Comments"
 
-#: widgets/class-faq-widget.php:133
-msgid "سوالات متداول"
-msgstr "frequently asked questions"
+#: widgets/class-comments-widget.php:18
+msgid "دیدگاه"
+msgstr "comment"
 
-#: widgets/class-faq-widget.php:133
-msgid "سوالات"
-msgstr "questions"
+#: widgets/class-comments-widget.php:18
+msgid "نظر"
+msgstr "opinion"
 
-#: widgets/class-faq-widget.php:133
-msgid "آکاردئون"
-msgstr "accordion"
+#: widgets/class-comments-widget.php:18
+msgid "کامنت"
+msgstr "feedback"
 
-#: widgets/class-faq-widget.php:137
-msgid "سوال‌ها"
-msgstr "Questions"
-
-#: widgets/class-faq-widget.php:140 widgets/class-faq-widget.php:142
-msgid "عنوان سوال"
-msgstr "Question title"
-
-#: widgets/class-faq-widget.php:146
-msgid "پاسخ"
-msgstr "Answer"
-
-#: widgets/class-faq-widget.php:148
-msgid "متن پاسخ…"
-msgstr "Answer text…"
-
-#: widgets/class-faq-widget.php:151
-msgid "باز بودن پیش‌فرض"
-msgstr "Open by default"
-
-#: widgets/class-faq-widget.php:153 widgets/class-faq-widget.php:250 widgets/class-search-widget.php:109 widgets/class-search-widget.php:117 widgets/class-search-widget.php:182 widgets/class-search-widget.php:192 widgets/class-search-widget.php:288 widgets/class-search-widget.php:447
+#: widgets/class-comments-widget.php:26 widgets/class-faq-widget.php:159 widgets/class-faq-widget.php:256 widgets/class-search-widget.php:111 widgets/class-search-widget.php:119 widgets/class-search-widget.php:184 widgets/class-search-widget.php:194 widgets/class-search-widget.php:290 widgets/class-search-widget.php:449
 msgid "بله"
 msgstr "Yes"
 
-#: widgets/class-faq-widget.php:154 widgets/class-faq-widget.php:251 widgets/class-search-widget.php:110 widgets/class-search-widget.php:118 widgets/class-search-widget.php:183 widgets/class-search-widget.php:193 widgets/class-search-widget.php:289 widgets/class-search-widget.php:448
+#: widgets/class-comments-widget.php:27 widgets/class-faq-widget.php:160 widgets/class-faq-widget.php:257 widgets/class-search-widget.php:112 widgets/class-search-widget.php:120 widgets/class-search-widget.php:185 widgets/class-search-widget.php:195 widgets/class-search-widget.php:291 widgets/class-search-widget.php:450
 msgid "خیر"
 msgstr "No"
 
-#: widgets/class-faq-widget.php:159 widgets/class-search-widget.php:668
-msgid "آیتم‌ها"
-msgstr "Items"
-
-#: widgets/class-faq-widget.php:164
-msgid "دوره‌ها به چه صورت برگزار می‌شوند؟"
-msgstr "How are the courses delivered?"
-
-#: widgets/class-faq-widget.php:165
-msgid "همه دوره‌ها ویدیویی و آنلاین هستند. پس از خرید، از پنل کاربری خود به‌صورت مادام‌العمر به جلسه‌ها دسترسی دارید و می‌توانید با گوشی، تبلت یا کامپیوتر در هر ساعت از شبانه‌روز یاد بگیرید."
-msgstr "All courses are video-based and online. After purchase you get lifetime access to the lessons from your dashboard and can learn on your phone, tablet or computer at any time of day."
-
-#: widgets/class-faq-widget.php:169
-msgid "آیا پس از پایان دوره گواهی دریافت می‌کنم؟"
-msgstr "Will I receive a certificate after finishing a course?"
-
-#: widgets/class-faq-widget.php:170
-msgid "بله. پس از اتمام جلسه‌ها و تحویل پروژه پایانی، گواهی پایان دوره با کد رهگیری اختصاصی صادر می‌شود که از بخش «دوره‌های من» در پنل کاربری قابل دریافت و چاپ است."
-msgstr "Yes. After completing the lessons and submitting the final project, a certificate with a unique tracking code is issued, which you can download and print from “My Courses” in your dashboard."
-
-#: widgets/class-faq-widget.php:173
-msgid "اگر سوالی در طول دوره داشته باشم چه کنم؟"
-msgstr "What if I have a question during the course?"
-
-#: widgets/class-faq-widget.php:174
-msgid "از طریق سیستم تیکت پشتیبانی در پنل کاربری سوال خود را مطرح کنید. کارشناسان ما معمولاً در کمتر از ۲۴ ساعت پاسخ می‌دهند و سوالات پرتکرار هر دوره هم در همان صفحه دوره پاسخ داده شده است."
-msgstr "Submit your question through the support ticket system in your dashboard. Our team usually replies within 24 hours, and common questions for each course are answered on the course page."
-
-#: widgets/class-faq-widget.php:177
-msgid "دسترسی به دوره‌ها چه مدت فعال است؟"
-msgstr "How long do I have access to the courses?"
-
-#: widgets/class-faq-widget.php:178
-msgid "دسترسی شما به محتوای خریداری‌شده مادام‌العمر است و هر زمان که دوره‌ای به‌روزرسانی شود، محتوای جدید به‌صورت رایگان برای شما فعال می‌شود."
-msgstr "You have lifetime access to purchased content, and whenever a course is updated the new content is unlocked for you free of charge."
-
-#: widgets/class-faq-widget.php:181
-msgid "آیا امکان پرداخت قسطی وجود دارد؟"
-msgstr "Can I pay in installments?"
-
-#: widgets/class-faq-widget.php:182
-msgid "برای برخی دوره‌ها پرداخت قسطی (معمولاً در دو قسط) فراهم شده است. برای اطلاع از شرایط، قبل از خرید با پشتیبانی در ارتباط باشید یا از طریق صفحه تماس پیام بدهید."
-msgstr "Installment payment (usually in two parts) is available for some courses. To learn about the terms, contact support before purchasing or send a message via the contact page."
-
-#: widgets/class-faq-widget.php:189
-msgid "تنظیمات رفتار"
-msgstr "Behavior"
-
-#: widgets/class-faq-widget.php:191
-msgid "حالت باز شدن"
-msgstr "Open mode"
-
-#: widgets/class-faq-widget.php:194
-msgid "آکاردئون (فقط یک آیتم باز)"
-msgstr "Accordion (one item open)"
-
-#: widgets/class-faq-widget.php:195
-msgid "آزاد (چند آیتم همزمان)"
-msgstr "Toggle (multiple items open)"
-
-#: widgets/class-faq-widget.php:200 widgets/class-faq-widget.php:596 widgets/class-search-widget.php:508
-msgid "آیکون"
-msgstr "Icon"
-
-#: widgets/class-faq-widget.php:203
-msgid "پلاس"
-msgstr "Plus"
-
-#: widgets/class-faq-widget.php:204
-msgid "فلش (شورون)"
-msgstr "Chevron"
-
-#: widgets/class-faq-widget.php:205
-msgid "سفارشی (کتابخانه المنتور)"
-msgstr "Custom (Elementor library)"
-
-#: widgets/class-faq-widget.php:210
-msgid "آیکون سفارشی"
-msgstr "Custom icon"
-
-#: widgets/class-faq-widget.php:219
-msgid "سرعت انیمیشن (میلی‌ثانیه)"
-msgstr "Animation speed (ms)"
-
-#: widgets/class-faq-widget.php:235
-msgid "سئو و ساختار"
-msgstr "SEO & structure"
-
-#: widgets/class-faq-widget.php:237
-msgid "تگ عنوان سوال"
-msgstr "Question title tag"
-
-#: widgets/class-faq-widget.php:241
-msgid "H3 (پیشنهادی)"
-msgstr "H3 (recommended)"
-
-#: widgets/class-faq-widget.php:243
-msgid "DIV (بدون تگ هدینگ)"
-msgstr "DIV (no heading tag)"
-
-#: widgets/class-faq-widget.php:248
-msgid "اسکیمای FAQ (JSON-LD)"
-msgstr "FAQ schema (JSON-LD)"
-
-#: widgets/class-faq-widget.php:254
-msgid "خروجی ساخت‌یافته FAQPage برای موتورهای جستجو. اگر چند ویجت در صفحه باشد، فقط اولی اسکیما می‌دهد."
-msgstr "Structured FAQPage output for search engines. If several widgets are on the page, only the first one outputs the schema."
-
-#: widgets/class-faq-widget.php:258
-msgid "طرح کلی"
-msgstr "Layout"
-
-#: widgets/class-faq-widget.php:260
-msgid "حداکثر عرض"
-msgstr "Max width"
-
-#: widgets/class-faq-widget.php:289
-msgid "تراز افقی ویجت"
-msgstr "Widget alignment"
-
-#: widgets/class-faq-widget.php:293 widgets/class-search-widget.php:324 widgets/class-search-widget.php:417 widgets/class-search-widget.php:631
-msgid "راست"
-msgstr "Right"
-
-#: widgets/class-faq-widget.php:297 widgets/class-search-widget.php:328 widgets/class-search-widget.php:421 widgets/class-search-widget.php:635
-msgid "وسط"
-msgstr "Center"
-
-#: widgets/class-faq-widget.php:301 widgets/class-search-widget.php:332 widgets/class-search-widget.php:425 widgets/class-search-widget.php:639
-msgid "چپ"
-msgstr "Left"
-
-#: widgets/class-faq-widget.php:314
-msgid "فاصله بین کارت‌ها"
-msgstr "Gap between cards"
-
-#: widgets/class-faq-widget.php:331
-msgid "بدنه کارت"
-msgstr "Card body"
-
-#: widgets/class-faq-widget.php:333 widgets/class-faq-widget.php:419 widgets/class-faq-widget.php:517
-msgid "بسته"
-msgstr "Closed"
-
-#: widgets/class-faq-widget.php:335 widgets/class-faq-widget.php:367 widgets/class-faq-widget.php:519 widgets/class-faq-widget.php:533 widgets/class-faq-widget.php:685 widgets/class-faq-widget.php:699 widgets/class-search-widget.php:481 widgets/class-search-widget.php:528 widgets/class-search-widget.php:608
-msgid "پس‌زمینه"
-msgstr "Background"
-
-#: widgets/class-faq-widget.php:342 widgets/class-faq-widget.php:561 widgets/class-search-widget.php:487 widgets/class-search-widget.php:534 widgets/class-search-widget.php:615
-msgid "کادر"
-msgstr "Border"
-
-#: widgets/class-faq-widget.php:361 widgets/class-faq-widget.php:380 widgets/class-faq-widget.php:434 widgets/class-faq-widget.php:453 widgets/class-search-widget.php:545
-msgid "سایه"
-msgstr "Shadow"
-
-#: widgets/class-faq-widget.php:365 widgets/class-faq-widget.php:438 widgets/class-faq-widget.php:531
-msgid "باز"
-msgstr "Open"
-
-#: widgets/class-faq-widget.php:373
-msgid "رنگ کادر"
-msgstr "Border color"
-
-#: widgets/class-faq-widget.php:386
-msgid "میزان تاری شیشه‌ای"
-msgstr "Glass blur"
-
-#: widgets/class-faq-widget.php:402 widgets/class-faq-widget.php:565 widgets/class-search-widget.php:496 widgets/class-search-widget.php:538 widgets/class-search-widget.php:620
-msgid "گردی گوشه‌ها"
-msgstr "Border radius"
-
-#: widgets/class-faq-widget.php:417 widgets/class-search-widget.php:266
-msgid "عنوان"
-msgstr "Title"
-
-#: widgets/class-faq-widget.php:421 widgets/class-faq-widget.php:440
-msgid "پس‌زمینه ردیف عنوان"
-msgstr "Title row background"
-
-#: widgets/class-faq-widget.php:427 widgets/class-faq-widget.php:446 widgets/class-faq-widget.php:525 widgets/class-faq-widget.php:539 widgets/class-search-widget.php:471
-msgid "رنگ متن"
-msgstr "Text color"
-
-#: widgets/class-faq-widget.php:459
-msgid "رنگ متن (هاور)"
-msgstr "Text color (hover)"
-
-#: widgets/class-faq-widget.php:466 widgets/class-faq-widget.php:548 widgets/class-search-widget.php:467
-msgid "تایپوگرافی"
-msgstr "Typography"
-
-#: widgets/class-faq-widget.php:480
-msgid "کادر ردیف عنوان"
-msgstr "Title row border"
-
-#: widgets/class-faq-widget.php:484
-msgid "گردی گوشه‌های ردیف عنوان"
-msgstr "Title row border radius"
-
-#: widgets/class-faq-widget.php:500 widgets/class-faq-widget.php:581 widgets/class-search-widget.php:502 widgets/class-search-widget.php:594
-msgid "پدینگ"
-msgstr "Padding"
-
-#: widgets/class-faq-widget.php:515
-msgid "کارت توضیحات"
-msgstr "Answer card"
-
-#: widgets/class-faq-widget.php:598
-msgid "فاصله از متن"
-msgstr "Spacing from text"
-
-#: widgets/class-faq-widget.php:614
-msgid "اندازه باکس"
-msgstr "Box size"
-
-#: widgets/class-faq-widget.php:630 widgets/class-search-widget.php:518
-msgid "اندازه آیکون"
-msgstr "Icon size"
-
-#: widgets/class-faq-widget.php:649
-msgid "گردی باکس"
-msgstr "Box radius"
-
-#: widgets/class-faq-widget.php:665
-msgid "چرخش آیکون سفارشی در حالت باز (درجه)"
-msgstr "Custom icon rotation when open (deg)"
-
-#: widgets/class-faq-widget.php:683
-msgid "عادی"
-msgstr "Normal"
-
-#: widgets/class-faq-widget.php:691 widgets/class-faq-widget.php:705 widgets/class-search-widget.php:513
-msgid "رنگ آیکون"
-msgstr "Icon color"
-
-#: widgets/class-faq-widget.php:697
-msgid "حالت باز"
-msgstr "Open state"
-
-#: widgets/class-search-widget.php:12
-msgid "جستجوی زنده"
-msgstr "Live Search"
-
-#: widgets/class-search-widget.php:15
-msgid "جستجو"
-msgstr "search"
-
-#: widgets/class-search-widget.php:15
-msgid "سرچ"
-msgstr "find"
-
-#: widgets/class-search-widget.php:15
-msgid "دوره"
-msgstr "course"
-
-#: widgets/class-search-widget.php:15
-msgid "مقاله"
-msgstr "article"
-
-#: widgets/class-search-widget.php:35
-msgid "نوشته‌ها"
-msgstr "Posts"
-
-#: widgets/class-search-widget.php:42 widgets/class-search-widget.php:135
-msgid "قالب پیش‌فرض"
-msgstr "Default template"
-
-#: widgets/class-search-widget.php:87
-msgid "عمومی"
-msgstr "General"
-
-#: widgets/class-search-widget.php:89
-msgid "حالت نمایش نتایج"
-msgstr "Results display mode"
-
-#: widgets/class-search-widget.php:92
-msgid "حالت لیست"
-msgstr "List mode"
-
-#: widgets/class-search-widget.php:93
-msgid "حالت نمایش در صفحه"
-msgstr "Display in page mode"
-
-#: widgets/class-search-widget.php:97
-msgid "«حالت لیست»: نتایج در یک پنل بازشو زیر فیلد جستجو. «حالت نمایش در صفحه»: نتایج در یک ناحیه‌ی همیشه‌باز داخل همین ویجت."
-msgstr "“List mode”: results in a dropdown panel under the search field. “Display in page mode”: results in an always-open region inside this widget."
-
-#: widgets/class-search-widget.php:100
+#: widgets/class-comments-widget.php:89
+msgid "نمایش فیلد"
+msgstr "Show field"
+
+#: widgets/class-comments-widget.php:93
+msgid "اجباری"
+msgstr "Required"
+
+#: widgets/class-comments-widget.php:95
+msgid "برچسب"
+msgstr "Label"
+
+#: widgets/class-comments-widget.php:97 widgets/class-search-widget.php:102
 msgid "متن راهنما"
 msgstr "Placeholder"
 
-#: widgets/class-search-widget.php:107
-msgid "نمایش تصویر"
-msgstr "Show image"
+#: widgets/class-comments-widget.php:99
+msgid "ترتیب نمایش"
+msgstr "Display order"
 
-#: widgets/class-search-widget.php:115
-msgid "نمایش خلاصه"
-msgstr "Show excerpt"
+#: widgets/class-comments-widget.php:128 widgets/class-faq-widget.php:472 widgets/class-faq-widget.php:554 widgets/class-search-widget.php:469
+msgid "تایپوگرافی"
+msgstr "Typography"
 
-#: widgets/class-search-widget.php:123
-msgid "متن «نمایش همه»"
-msgstr "“View all” text"
+#: widgets/class-comments-widget.php:181 widgets/class-faq-widget.php:348 widgets/class-faq-widget.php:567 widgets/class-search-widget.php:489 widgets/class-search-widget.php:536 widgets/class-search-widget.php:617
+msgid "کادر"
+msgstr "Border"
 
-#: widgets/class-search-widget.php:130
-msgid "طرح‌بندی"
-msgstr "Layout"
+#: widgets/class-comments-widget.php:192 widgets/class-faq-widget.php:367 widgets/class-faq-widget.php:386 widgets/class-faq-widget.php:440 widgets/class-faq-widget.php:459 widgets/class-search-widget.php:547
+msgid "سایه"
+msgstr "Shadow"
 
-#: widgets/class-search-widget.php:132
-msgid "انتخاب قالب"
-msgstr "Select template"
+#: widgets/class-comments-widget.php:199 widgets/class-comments-widget.php:410 widgets/class-comments-widget.php:415 widgets/class-comments-widget.php:441 widgets/class-comments-widget.php:508 widgets/class-comments-widget.php:520 widgets/class-comments-widget.php:530 widgets/class-faq-widget.php:341 widgets/class-faq-widget.php:373 widgets/class-faq-widget.php:525 widgets/class-faq-widget.php:539 widgets/class-faq-widget.php:691 widgets/class-faq-widget.php:705 widgets/class-search-widget.php:483 widgets/class-search-widget.php:530 widgets/class-search-widget.php:610
+msgid "پس‌زمینه"
+msgstr "Background"
 
-#: widgets/class-search-widget.php:136
-msgid "سفارشی"
-msgstr "Custom"
+#: widgets/class-comments-widget.php:201 widgets/class-comments-widget.php:421 widgets/class-comments-widget.php:446 widgets/class-comments-widget.php:458 widgets/class-comments-widget.php:512 widgets/class-comments-widget.php:524 widgets/class-comments-widget.php:532 widgets/class-faq-widget.php:408 widgets/class-faq-widget.php:571 widgets/class-search-widget.php:498 widgets/class-search-widget.php:540 widgets/class-search-widget.php:622
+msgid "گردی گوشه‌ها"
+msgstr "Border radius"
 
-#: widgets/class-search-widget.php:140
-msgid "«قالب پیش‌فرض»: طراحی داخلی افزونه. «سفارشی»: یک قالب ذخیره‌شده در کتابخانه المنتور."
-msgstr "“Default template”: the plugin's built-in design. “Custom”: a template saved in the Elementor library."
+#: widgets/class-comments-widget.php:204 widgets/class-comments-widget.php:422 widgets/class-comments-widget.php:447 widgets/class-comments-widget.php:513 widgets/class-comments-widget.php:533
+msgid "فاصلهٔ داخلی"
+msgstr "Padding"
 
-#: widgets/class-search-widget.php:143
-msgid "یک قالب انتخاب کنید"
-msgstr "Select a template"
+#: widgets/class-comments-widget.php:210 widgets/class-comments-widget.php:384 widgets/class-comments-widget.php:391 widgets/class-comments-widget.php:400 widgets/class-comments-widget.php:429 widgets/class-comments-widget.php:489 widgets/class-comments-widget.php:494 widgets/class-comments-widget.php:507 widgets/class-comments-widget.php:519 widgets/class-comments-widget.php:529
+msgid "رنگ"
+msgstr "Color"
 
-#: widgets/class-search-widget.php:152
-msgid "ویرایش قالب"
-msgstr "Edit template"
+#: widgets/class-comments-widget.php:231
+msgid "فرم دیدگاه"
+msgstr "Comment form"
 
-#: widgets/class-search-widget.php:156
-msgid "ستون‌ها"
-msgstr "Columns"
+#: widgets/class-comments-widget.php:232
+msgid "نمایش فرم"
+msgstr "Show form"
 
-#: widgets/class-search-widget.php:164
-msgid "تعداد ستون‌های شبکه‌ی نتایج در «حالت نمایش در صفحه»."
-msgstr "Number of grid columns for the results in “Page” display mode."
+#: widgets/class-comments-widget.php:233 widgets/class-comments-widget.php:390
+msgid "عنوان فرم"
+msgstr "Form title"
 
-#: widgets/class-search-widget.php:170
-msgid "آیتم در هر برگه"
-msgstr "Items per page"
+#: widgets/class-comments-widget.php:236
+msgid "تگ عنوان فرم"
+msgstr "Form title tag"
 
-#: widgets/class-search-widget.php:177
-msgid "تعداد نتایجی که برای هر جستجو دریافت و نمایش داده می‌شود."
-msgstr "How many results are fetched and shown for each search."
+#: widgets/class-comments-widget.php:246
+msgid "یادداشت بالای فیلدها"
+msgstr "Note above the fields"
 
-#: widgets/class-search-widget.php:180
-msgid "کاشی"
-msgstr "Masonry"
+#: widgets/class-comments-widget.php:247
+msgid "یادداشت زیر فیلدها"
+msgstr "Note below the fields"
 
-#: widgets/class-search-widget.php:186
-msgid "چیدمان آجری (Masonry): کارت‌ها با ارتفاع متفاوت، بدون فضای خالی، زیر هم چیده می‌شوند."
-msgstr "Masonry layout: cards of different heights stack without gaps."
+#: widgets/class-comments-widget.php:248
+msgid "متن دکمه ارسال"
+msgstr "Submit button text"
 
-#: widgets/class-search-widget.php:190
-msgid "ارتفاع برابر"
-msgstr "Equal height"
+#: widgets/class-comments-widget.php:249
+msgid "متن لغو پاسخ"
+msgstr "Cancel reply text"
 
-#: widgets/class-search-widget.php:196
-msgid "همه‌ی کارت‌های یک ردیف هم‌ارتفاع می‌شوند."
-msgstr "All cards in a row get the same height."
+#: widgets/class-comments-widget.php:250
+msgid "فقط کاربران واردشده"
+msgstr "Logged-in users only"
 
-#: widgets/class-search-widget.php:204
-msgid "کوئری"
-msgstr "Query"
+#: widgets/class-comments-widget.php:256 widgets/class-comments-widget.php:405
+msgid "فیلدها"
+msgstr "Fields"
 
-#: widgets/class-search-widget.php:206
-msgid "منبع"
-msgstr "Source"
+#: widgets/class-comments-widget.php:262
+msgid "چیدمان نام، ایمیل و وب‌سایت"
+msgstr "Name, email and website layout"
 
-#: widgets/class-search-widget.php:208 widgets/class-search-widget.php:214
-msgid "پست‌تایپ سفارشی"
-msgstr "Custom post type"
+#: widgets/class-comments-widget.php:264
+msgid "کنار هم"
+msgstr "Side by side"
 
-#: widgets/class-search-widget.php:211
-msgid "پست‌تایپ اصلی برای جستجو. با «پست‌تایپ سفارشی» می‌توانید اسلاگ دلخواه وارد کنید."
-msgstr "Main post type to search. Choose “Custom post type” to enter any slug."
+#: widgets/class-comments-widget.php:265
+msgid "زیر هم"
+msgstr "Stacked"
 
-#: widgets/class-search-widget.php:216
-msgid "مثلاً sfwd-courses"
-msgstr "e.g. sfwd-courses"
+#: widgets/class-comments-widget.php:272 widgets/class-comments-widget.php:426
+msgid "تیک ذخیره در مرورگر"
+msgstr "Save-in-browser checkbox"
 
-#: widgets/class-search-widget.php:217
-msgid "اسلاگ پست‌تایپ دلخواه. فقط پست‌تایپ‌های عمومیِ قابل جستجو مجازند (در غیر این صورت: نوشته‌ها)."
-msgstr "Post type slug. Only public, searchable post types are allowed (otherwise: posts)."
+#: widgets/class-comments-widget.php:273 widgets/class-comments-widget.php:498
+msgid "متن دیدگاه"
+msgstr "Comment text"
 
-#: widgets/class-search-widget.php:222
-msgid "شامل توسط"
-msgstr "Include by"
+#: widgets/class-comments-widget.php:274
+msgid "تعداد سطرهای متن دیدگاه"
+msgstr "Comment text rows"
 
-#: widgets/class-search-widget.php:226
-msgid "استثنا"
-msgstr "Exclude"
+#: widgets/class-comments-widget.php:277
+msgid "فهرست دیدگاه‌ها"
+msgstr "Comments list"
 
-#: widgets/class-search-widget.php:230
-msgid "شامل"
-msgstr "Include"
+#: widgets/class-comments-widget.php:278
+msgid "نمایش فهرست"
+msgstr "Show list"
 
-#: widgets/class-search-widget.php:236
-msgid "«استثنا»: نتایج فقط شامل آیتم‌هایی که در لیست نیستند. «شامل»: فقط آیتم‌های داخل لیست."
-msgstr "“Exclude”: results include only items not in the list. “Include”: only items in the list."
+#: widgets/class-comments-widget.php:279 widgets/class-comments-widget.php:383
+msgid "عنوان فهرست"
+msgstr "List title"
 
-#: widgets/class-search-widget.php:239
-msgid "دسته‌ها و برچسب‌ها"
-msgstr "Categories & tags"
+#: widgets/class-comments-widget.php:282
+msgid "تگ عنوان فهرست"
+msgstr "List title tag"
 
-#: widgets/class-search-widget.php:245
-msgid "ترم‌های موردنظر از همه‌ی طبقه‌بندی‌های عمومی (دسته، برچسب، …) را جستجو و انتخاب کنید. خالی = بدون فیلتر."
-msgstr "Search and select terms from any public taxonomy (categories, tags, …). Empty = no filter."
+#: widgets/class-comments-widget.php:292
+msgid "نمایش تعداد دیدگاه‌ها"
+msgstr "Show comment count"
 
-#: widgets/class-search-widget.php:248 widgets/class-search-widget.php:265
-msgid "تاریخ"
-msgstr "Date"
+#: widgets/class-comments-widget.php:293
+msgid "تعداد در هر صفحه (0 = طبق وردپرس)"
+msgstr "Comments per page (0 = follow WordPress)"
 
-#: widgets/class-search-widget.php:251
-msgid "همه"
-msgstr "All"
+#: widgets/class-comments-widget.php:296
+msgid "ترتیب فهرست"
+msgstr "List order"
 
-#: widgets/class-search-widget.php:252
-msgid "هفته"
-msgstr "Week"
+#: widgets/class-comments-widget.php:298 widgets/class-comments-widget.php:308
+msgid "طبق تنظیمات وردپرس"
+msgstr "Follow WordPress settings"
 
-#: widgets/class-search-widget.php:253
-msgid "ماه"
-msgstr "Month"
+#: widgets/class-comments-widget.php:299
+msgid "قدیمی‌ترین اول"
+msgstr "Oldest first"
 
-#: widgets/class-search-widget.php:254
-msgid "سال"
-msgstr "Year"
+#: widgets/class-comments-widget.php:300
+msgid "جدیدترین اول"
+msgstr "Newest first"
 
-#: widgets/class-search-widget.php:258
-msgid "محدوده‌ی زمانی نتایج. پیش‌فرض: همه."
-msgstr "Time range of results. Default: all."
+#: widgets/class-comments-widget.php:306 widgets/class-comments-widget.php:457
+msgid "آواتار"
+msgstr "Avatar"
 
-#: widgets/class-search-widget.php:261
-msgid "ترتیب بر اساس"
-msgstr "Order by"
-
-#: widgets/class-search-widget.php:264
-msgid "ارتباط با عبارت جستجو"
-msgstr "Relevance to the search phrase"
-
-#: widgets/class-search-widget.php:267
-msgid "نویسنده"
-msgstr "Author"
-
-#: widgets/class-search-widget.php:268
-msgid "تصادفی"
-msgstr "Random"
-
-#: widgets/class-search-widget.php:269
-msgid "سفارش منو"
-msgstr "Menu order"
-
-#: widgets/class-search-widget.php:275
-msgid "سفارش"
-msgstr "Order"
-
-#: widgets/class-search-widget.php:278
-msgid "نزولی"
-msgstr "Descending"
-
-#: widgets/class-search-widget.php:279
-msgid "صعودی"
-msgstr "Ascending"
-
-#: widgets/class-search-widget.php:286
-msgid "نادیده گرفتن نوشته‌های چسبنده"
-msgstr "Ignore sticky posts"
-
-#: widgets/class-search-widget.php:292
-msgid "اگر خاموش باشد، نوشته‌های چسبنده (Sticky) در ابتدای نتایج قرار می‌گیرند."
-msgstr "When off, sticky posts are moved to the top of the results."
-
-#: widgets/class-search-widget.php:296
-msgid "کوئری ID"
-msgstr "Query ID"
-
-#: widgets/class-search-widget.php:298
-msgid "my_search_query"
-msgstr "my_search_query"
-
-#: widgets/class-search-widget.php:299
-msgid "شناسه‌ی یکتا برای فیلتر کردن آرگومان‌های کوئری در سمت سرور با هوک wgcr_search_query_args/{query_id}."
-msgstr "Unique ID for filtering the query arguments server-side via the wgcr_search_query_args/{query_id} hook."
-
-#: widgets/class-search-widget.php:304 widgets/class-search-widget.php:306
-msgid "صفحه‌بندی"
-msgstr "Pagination"
-
-#: widgets/class-search-widget.php:309
-msgid "هیچکدام"
-msgstr "None"
-
-#: widgets/class-search-widget.php:310
-msgid "شماره‌ها"
-msgstr "Numbers"
-
-#: widgets/class-search-widget.php:311
-msgid "قبلی / بعدی"
-msgstr "Previous / Next"
-
-#: widgets/class-search-widget.php:312
-msgid "بارگذاری با کلیک"
-msgstr "Load on click"
-
-#: widgets/class-search-widget.php:313
-msgid "بارگذاری با اسکرول"
-msgstr "Load on scroll"
-
-#: widgets/class-search-widget.php:317
-msgid "نتایج بیشتر از «آیتم در هر برگه» به صفحه‌های بعدی می‌روند و داخل همان کادر نتایج بارگذاری می‌شوند."
-msgstr "Results beyond “Items per page” go to further pages and load inside the same results panel."
-
-#: widgets/class-search-widget.php:320 widgets/class-search-widget.php:413
-msgid "چیدمان"
-msgstr "Layout"
-
-#: widgets/class-search-widget.php:336 widgets/class-search-widget.php:429 widgets/class-search-widget.php:643
-msgid "کشیده"
-msgstr "Stretch"
-
-#: widgets/class-search-widget.php:352
-msgid "اسپیسر"
-msgstr "Spacer"
-
-#: widgets/class-search-widget.php:356
-msgid "با"
-msgstr "With"
-
-#: widgets/class-search-widget.php:360
-msgid "بدون"
-msgstr "Without"
-
-#: widgets/class-search-widget.php:369
-msgid "دکمه"
-msgstr "Button"
-
-#: widgets/class-search-widget.php:375
-msgid "متن دکمه"
-msgstr "Button text"
-
-#: widgets/class-search-widget.php:382
-msgid "آیکن"
-msgstr "Icon"
-
-#: widgets/class-search-widget.php:386
+#: widgets/class-comments-widget.php:309 widgets/class-search-widget.php:388
 msgid "نمایش"
 msgstr "Show"
 
-#: widgets/class-search-widget.php:390
-msgid "مخفی"
-msgstr "Hidden"
+#: widgets/class-comments-widget.php:310
+msgid "عدم نمایش"
+msgstr "Hide"
 
-#: widgets/class-search-widget.php:399
-msgid "شناسه دکمه"
-msgstr "Button ID"
+#: widgets/class-comments-widget.php:314
+msgid "اندازهٔ آواتار"
+msgstr "Avatar size"
 
-#: widgets/class-search-widget.php:402
-msgid "اطمینان حاصل کنید که شناسه (ID) یکتا بوده و در جای دیگری از برگه استفاده نشده است. فقط حروف انگلیسی، عدد و زیرخط بدون فاصله مجاز است."
-msgstr "Make sure the ID is unique and not used elsewhere on the page. Only English letters, numbers and underscores without spaces are allowed."
+#: widgets/class-comments-widget.php:315
+msgid "نمایش تاریخ"
+msgstr "Show date"
 
-#: widgets/class-search-widget.php:407
-msgid "پیام نوشته‌های بیشتر موجود نیست"
-msgstr "No more posts message"
+#: widgets/class-comments-widget.php:316
+msgid "نمایش لینک پاسخ"
+msgstr "Show reply link"
 
-#: widgets/class-search-widget.php:445
-msgid "پیام سفارشی"
-msgstr "Custom message"
+#: widgets/class-comments-widget.php:317
+msgid "متن لینک پاسخ"
+msgstr "Reply link text"
 
-#: widgets/class-search-widget.php:454
-msgid "متن پیام سفارشی"
-msgstr "Custom message text"
+#: widgets/class-comments-widget.php:320 widgets/class-comments-widget.php:527
+msgid "پیام‌ها"
+msgstr "Messages"
 
-#: widgets/class-search-widget.php:464
-msgid "فیلد جستجو"
-msgstr "Search field"
+#: widgets/class-comments-widget.php:321
+msgid "پیام فهرست خالی"
+msgstr "Empty list message"
 
-#: widgets/class-search-widget.php:476
+#: widgets/class-comments-widget.php:322
+msgid "پیام در انتظار تأیید"
+msgstr "Awaiting moderation message"
+
+#: widgets/class-comments-widget.php:323
+msgid "پیام بسته بودن دیدگاه‌ها"
+msgstr "Comments closed message"
+
+#: widgets/class-comments-widget.php:324
+msgid "پیام نیاز به ورود"
+msgstr "Login required message"
+
+#: widgets/class-comments-widget.php:325 widgets/class-comments-widget.php:537
+msgid "متن کاربر واردشده"
+msgstr "Logged-in user text"
+
+#: widgets/class-comments-widget.php:326
+msgid "نمایش متن کاربر واردشده"
+msgstr "Show logged-in user text"
+
+#: widgets/class-comments-widget.php:330
+msgid "متن"
+msgstr "Text"
+
+#: widgets/class-comments-widget.php:331
+msgid "برای نمایش نام کاربر، {name} را در متن بنویسید. این متن فقط به کاربر واردشده نشان داده می‌شود."
+msgstr "Write {name} in the text to show the user's name. This text is shown only to logged-in users."
+
+#: widgets/class-comments-widget.php:345
+msgid "نمایش لینک ویرایش نمایه"
+msgstr "Show edit profile link"
+
+#: widgets/class-comments-widget.php:346
+msgid "متن لینک ویرایش نمایه"
+msgstr "Edit profile link text"
+
+#: widgets/class-comments-widget.php:347
+msgid "نمایش لینک خروج"
+msgstr "Show log out link"
+
+#: widgets/class-comments-widget.php:348
+msgid "متن لینک خروج"
+msgstr "Log out link text"
+
+#: widgets/class-comments-widget.php:351 widgets/class-faq-widget.php:264
+msgid "طرح کلی"
+msgstr "Layout"
+
+#: widgets/class-comments-widget.php:352 widgets/class-faq-widget.php:266
+msgid "حداکثر عرض"
+msgstr "Max width"
+
+#: widgets/class-comments-widget.php:356 widgets/class-faq-widget.php:295
+msgid "تراز افقی ویجت"
+msgstr "Widget alignment"
+
+#: widgets/class-comments-widget.php:360 widgets/class-faq-widget.php:299 widgets/class-search-widget.php:326 widgets/class-search-widget.php:419 widgets/class-search-widget.php:633
+msgid "راست"
+msgstr "Right"
+
+#: widgets/class-comments-widget.php:364 widgets/class-faq-widget.php:303 widgets/class-search-widget.php:330 widgets/class-search-widget.php:423 widgets/class-search-widget.php:637
+msgid "وسط"
+msgstr "Center"
+
+#: widgets/class-comments-widget.php:368 widgets/class-faq-widget.php:307 widgets/class-search-widget.php:334 widgets/class-search-widget.php:427 widgets/class-search-widget.php:641
+msgid "چپ"
+msgstr "Left"
+
+#: widgets/class-comments-widget.php:380
+msgid "فاصلهٔ فهرست و فرم"
+msgstr "Gap between list and form"
+
+#: widgets/class-comments-widget.php:386
+msgid "رنگ شمارنده"
+msgstr "Counter color"
+
+#: widgets/class-comments-widget.php:387
+msgid "فاصله تا فهرست"
+msgstr "Gap to the list"
+
+#: widgets/class-comments-widget.php:395
+msgid "کارت فرم"
+msgstr "Form card"
+
+#: widgets/class-comments-widget.php:399
+msgid "برچسب‌ها"
+msgstr "Labels"
+
+#: widgets/class-comments-widget.php:402
+msgid "رنگ ستارهٔ اجباری"
+msgstr "Required asterisk color"
+
+#: widgets/class-comments-widget.php:409 widgets/class-comments-widget.php:440 widgets/class-comments-widget.php:539 widgets/class-faq-widget.php:433 widgets/class-faq-widget.php:452 widgets/class-faq-widget.php:531 widgets/class-faq-widget.php:545 widgets/class-search-widget.php:473
+msgid "رنگ متن"
+msgstr "Text color"
+
+#: widgets/class-comments-widget.php:411 widgets/class-search-widget.php:478
 msgid "رنگ متن راهنما"
 msgstr "Placeholder color"
 
-#: widgets/class-search-widget.php:491
+#: widgets/class-comments-widget.php:414
+msgid "فوکوس"
+msgstr "Focus"
+
+#: widgets/class-comments-widget.php:416 widgets/class-comments-widget.php:442 widgets/class-faq-widget.php:379
+msgid "رنگ کادر"
+msgstr "Border color"
+
+#: widgets/class-comments-widget.php:423
+msgid "فاصلهٔ بین فیلدها"
+msgstr "Gap between fields"
+
+#: widgets/class-comments-widget.php:428
+msgid "یادداشت‌های فرم"
+msgstr "Form notes"
+
+#: widgets/class-comments-widget.php:433
+msgid "دکمه ارسال"
+msgstr "Submit button"
+
+#: widgets/class-comments-widget.php:451
+msgid "کارت دیدگاه"
+msgstr "Comment card"
+
+#: widgets/class-comments-widget.php:453
+msgid "فاصلهٔ بین دیدگاه‌ها"
+msgstr "Gap between comments"
+
+#: widgets/class-comments-widget.php:454
+msgid "تورفتگی و فاصلهٔ پاسخ‌ها"
+msgstr "Reply indent and spacing"
+
+#: widgets/class-comments-widget.php:463
+msgid "عرض آواتار"
+msgstr "Avatar width"
+
+#: widgets/class-comments-widget.php:464
+msgid "برای تصویر واضح‌تر، «اندازهٔ آواتار» را در تب محتوا هم زیاد کنید."
+msgstr "For a sharper image, also raise “Avatar size” in the Content tab."
+
+#: widgets/class-comments-widget.php:484
+msgid "فاصله از کارت دیدگاه"
+msgstr "Distance from the comment card"
+
+#: widgets/class-comments-widget.php:487
+msgid "نام نویسنده"
+msgstr "Author name"
+
+#: widgets/class-comments-widget.php:491 widgets/class-comments-widget.php:496
+msgid "فاصله از آواتار"
+msgstr "Distance from the avatar"
+
+#: widgets/class-comments-widget.php:493 widgets/class-search-widget.php:250 widgets/class-search-widget.php:267
+msgid "تاریخ"
+msgstr "Date"
+
+#: widgets/class-comments-widget.php:500
+msgid "لینک پاسخ"
+msgstr "Reply link"
+
+#: widgets/class-comments-widget.php:516 widgets/class-search-widget.php:306 widgets/class-search-widget.php:308
+msgid "صفحه‌بندی"
+msgstr "Pagination"
+
+#: widgets/class-comments-widget.php:521
+msgid "رنگ در حالت هاور"
+msgstr "Hover color"
+
+#: widgets/class-comments-widget.php:522
+msgid "رنگ صفحهٔ جاری"
+msgstr "Current page color"
+
+#: widgets/class-comments-widget.php:523
+msgid "پس‌زمینهٔ صفحهٔ جاری"
+msgstr "Current page background"
+
+#: widgets/class-comments-widget.php:534
+msgid "رنگ پیام در انتظار تأیید"
+msgstr "Awaiting moderation message color"
+
+#: widgets/class-comments-widget.php:541
+msgid "رنگ لینک‌ها"
+msgstr "Link color"
+
+#: widgets/class-comments-widget.php:542
+msgid "رنگ لینک‌ها در حالت هاور"
+msgstr "Link hover color"
+
+#: widgets/class-comments-widget.php:545
+msgid "فاصله از اطراف"
+msgstr "Outer spacing"
+
+#: widgets/class-faq-widget.php:134
+msgid "سوالات متداول - FAQ"
+msgstr "FAQ"
+
+#: widgets/class-faq-widget.php:139
+msgid "سوالات متداول"
+msgstr "frequently asked questions"
+
+#: widgets/class-faq-widget.php:139
+msgid "سوالات"
+msgstr "questions"
+
+#: widgets/class-faq-widget.php:139
+msgid "آکاردئون"
+msgstr "accordion"
+
+#: widgets/class-faq-widget.php:143
+msgid "سوال‌ها"
+msgstr "Questions"
+
+#: widgets/class-faq-widget.php:146 widgets/class-faq-widget.php:148
+msgid "عنوان سوال"
+msgstr "Question title"
+
+#: widgets/class-faq-widget.php:152
+msgid "پاسخ"
+msgstr "Answer"
+
+#: widgets/class-faq-widget.php:154
+msgid "متن پاسخ…"
+msgstr "Answer text…"
+
+#: widgets/class-faq-widget.php:157
+msgid "باز بودن پیش‌فرض"
+msgstr "Open by default"
+
+#: widgets/class-faq-widget.php:165 widgets/class-search-widget.php:670
+msgid "آیتم‌ها"
+msgstr "Items"
+
+#: widgets/class-faq-widget.php:170
+msgid "دوره‌ها به چه صورت برگزار می‌شوند؟"
+msgstr "How are the courses delivered?"
+
+#: widgets/class-faq-widget.php:171
+msgid "همه دوره‌ها ویدیویی و آنلاین هستند. پس از خرید، از پنل کاربری خود به‌صورت مادام‌العمر به جلسه‌ها دسترسی دارید و می‌توانید با گوشی، تبلت یا کامپیوتر در هر ساعت از شبانه‌روز یاد بگیرید."
+msgstr "All courses are video-based and online. After purchase you get lifetime access to the lessons from your dashboard and can learn on your phone, tablet or computer at any time of day."
+
+#: widgets/class-faq-widget.php:175
+msgid "آیا پس از پایان دوره گواهی دریافت می‌کنم؟"
+msgstr "Will I receive a certificate after finishing a course?"
+
+#: widgets/class-faq-widget.php:176
+msgid "بله. پس از اتمام جلسه‌ها و تحویل پروژه پایانی، گواهی پایان دوره با کد رهگیری اختصاصی صادر می‌شود که از بخش «دوره‌های من» در پنل کاربری قابل دریافت و چاپ است."
+msgstr "Yes. After completing the lessons and submitting the final project, a certificate with a unique tracking code is issued, which you can download and print from “My Courses” in your dashboard."
+
+#: widgets/class-faq-widget.php:179
+msgid "اگر سوالی در طول دوره داشته باشم چه کنم؟"
+msgstr "What if I have a question during the course?"
+
+#: widgets/class-faq-widget.php:180
+msgid "از طریق سیستم تیکت پشتیبانی در پنل کاربری سوال خود را مطرح کنید. کارشناسان ما معمولاً در کمتر از ۲۴ ساعت پاسخ می‌دهند و سوالات پرتکرار هر دوره هم در همان صفحه دوره پاسخ داده شده است."
+msgstr "Submit your question through the support ticket system in your dashboard. Our team usually replies within 24 hours, and common questions for each course are answered on the course page."
+
+#: widgets/class-faq-widget.php:183
+msgid "دسترسی به دوره‌ها چه مدت فعال است؟"
+msgstr "How long do I have access to the courses?"
+
+#: widgets/class-faq-widget.php:184
+msgid "دسترسی شما به محتوای خریداری‌شده مادام‌العمر است و هر زمان که دوره‌ای به‌روزرسانی شود، محتوای جدید به‌صورت رایگان برای شما فعال می‌شود."
+msgstr "You have lifetime access to purchased content, and whenever a course is updated the new content is unlocked for you free of charge."
+
+#: widgets/class-faq-widget.php:187
+msgid "آیا امکان پرداخت قسطی وجود دارد؟"
+msgstr "Can I pay in installments?"
+
+#: widgets/class-faq-widget.php:188
+msgid "برای برخی دوره‌ها پرداخت قسطی (معمولاً در دو قسط) فراهم شده است. برای اطلاع از شرایط، قبل از خرید با پشتیبانی در ارتباط باشید یا از طریق صفحه تماس پیام بدهید."
+msgstr "Installment payment (usually in two parts) is available for some courses. To learn about the terms, contact support before purchasing or send a message via the contact page."
+
+#: widgets/class-faq-widget.php:195
+msgid "تنظیمات رفتار"
+msgstr "Behavior"
+
+#: widgets/class-faq-widget.php:197
+msgid "حالت باز شدن"
+msgstr "Open mode"
+
+#: widgets/class-faq-widget.php:200
+msgid "آکاردئون (فقط یک آیتم باز)"
+msgstr "Accordion (one item open)"
+
+#: widgets/class-faq-widget.php:201
+msgid "آزاد (چند آیتم همزمان)"
+msgstr "Toggle (multiple items open)"
+
+#: widgets/class-faq-widget.php:206 widgets/class-faq-widget.php:602 widgets/class-search-widget.php:510
+msgid "آیکون"
+msgstr "Icon"
+
+#: widgets/class-faq-widget.php:209
+msgid "پلاس"
+msgstr "Plus"
+
+#: widgets/class-faq-widget.php:210
+msgid "فلش (شورون)"
+msgstr "Chevron"
+
+#: widgets/class-faq-widget.php:211
+msgid "سفارشی (کتابخانه المنتور)"
+msgstr "Custom (Elementor library)"
+
+#: widgets/class-faq-widget.php:216
+msgid "آیکون سفارشی"
+msgstr "Custom icon"
+
+#: widgets/class-faq-widget.php:225
+msgid "سرعت انیمیشن (میلی‌ثانیه)"
+msgstr "Animation speed (ms)"
+
+#: widgets/class-faq-widget.php:241
+msgid "سئو و ساختار"
+msgstr "SEO & structure"
+
+#: widgets/class-faq-widget.php:243
+msgid "تگ عنوان سوال"
+msgstr "Question title tag"
+
+#: widgets/class-faq-widget.php:247
+msgid "H3 (پیشنهادی)"
+msgstr "H3 (recommended)"
+
+#: widgets/class-faq-widget.php:249
+msgid "DIV (بدون تگ هدینگ)"
+msgstr "DIV (no heading tag)"
+
+#: widgets/class-faq-widget.php:254
+msgid "اسکیمای FAQ (JSON-LD)"
+msgstr "FAQ schema (JSON-LD)"
+
+#: widgets/class-faq-widget.php:260
+msgid "خروجی ساخت‌یافته FAQPage برای موتورهای جستجو. اگر چند ویجت در صفحه باشد، فقط اولی اسکیما می‌دهد."
+msgstr "Structured FAQPage output for search engines. If several widgets are on the page, only the first one outputs the schema."
+
+#: widgets/class-faq-widget.php:320
+msgid "فاصله بین کارت‌ها"
+msgstr "Gap between cards"
+
+#: widgets/class-faq-widget.php:337
+msgid "بدنه کارت"
+msgstr "Card body"
+
+#: widgets/class-faq-widget.php:339 widgets/class-faq-widget.php:425 widgets/class-faq-widget.php:523
+msgid "بسته"
+msgstr "Closed"
+
+#: widgets/class-faq-widget.php:371 widgets/class-faq-widget.php:444 widgets/class-faq-widget.php:537
+msgid "باز"
+msgstr "Open"
+
+#: widgets/class-faq-widget.php:392
+msgid "میزان تاری شیشه‌ای"
+msgstr "Glass blur"
+
+#: widgets/class-faq-widget.php:423 widgets/class-search-widget.php:268
+msgid "عنوان"
+msgstr "Title"
+
+#: widgets/class-faq-widget.php:427 widgets/class-faq-widget.php:446
+msgid "پس‌زمینه ردیف عنوان"
+msgstr "Title row background"
+
+#: widgets/class-faq-widget.php:465
+msgid "رنگ متن (هاور)"
+msgstr "Text color (hover)"
+
+#: widgets/class-faq-widget.php:486
+msgid "کادر ردیف عنوان"
+msgstr "Title row border"
+
+#: widgets/class-faq-widget.php:490
+msgid "گردی گوشه‌های ردیف عنوان"
+msgstr "Title row border radius"
+
+#: widgets/class-faq-widget.php:506 widgets/class-faq-widget.php:587 widgets/class-search-widget.php:504 widgets/class-search-widget.php:596
+msgid "پدینگ"
+msgstr "Padding"
+
+#: widgets/class-faq-widget.php:521
+msgid "کارت توضیحات"
+msgstr "Answer card"
+
+#: widgets/class-faq-widget.php:604
+msgid "فاصله از متن"
+msgstr "Spacing from text"
+
+#: widgets/class-faq-widget.php:620
+msgid "اندازه باکس"
+msgstr "Box size"
+
+#: widgets/class-faq-widget.php:636 widgets/class-search-widget.php:520
+msgid "اندازه آیکون"
+msgstr "Icon size"
+
+#: widgets/class-faq-widget.php:655
+msgid "گردی باکس"
+msgstr "Box radius"
+
+#: widgets/class-faq-widget.php:671
+msgid "چرخش آیکون سفارشی در حالت باز (درجه)"
+msgstr "Custom icon rotation when open (deg)"
+
+#: widgets/class-faq-widget.php:697 widgets/class-faq-widget.php:711 widgets/class-search-widget.php:515
+msgid "رنگ آیکون"
+msgstr "Icon color"
+
+#: widgets/class-faq-widget.php:703
+msgid "حالت باز"
+msgstr "Open state"
+
+#: widgets/class-search-widget.php:14
+msgid "جستجوی زنده"
+msgstr "Live Search"
+
+#: widgets/class-search-widget.php:17
+msgid "جستجو"
+msgstr "search"
+
+#: widgets/class-search-widget.php:17
+msgid "سرچ"
+msgstr "find"
+
+#: widgets/class-search-widget.php:17
+msgid "دوره"
+msgstr "course"
+
+#: widgets/class-search-widget.php:17
+msgid "مقاله"
+msgstr "article"
+
+#: widgets/class-search-widget.php:37
+msgid "نوشته‌ها"
+msgstr "Posts"
+
+#: widgets/class-search-widget.php:44 widgets/class-search-widget.php:137
+msgid "قالب پیش‌فرض"
+msgstr "Default template"
+
+#: widgets/class-search-widget.php:89
+msgid "عمومی"
+msgstr "General"
+
+#: widgets/class-search-widget.php:91
+msgid "حالت نمایش نتایج"
+msgstr "Results display mode"
+
+#: widgets/class-search-widget.php:94
+msgid "حالت لیست"
+msgstr "List mode"
+
+#: widgets/class-search-widget.php:95
+msgid "حالت نمایش در صفحه"
+msgstr "Display in page mode"
+
+#: widgets/class-search-widget.php:99
+msgid "«حالت لیست»: نتایج در یک پنل بازشو زیر فیلد جستجو. «حالت نمایش در صفحه»: نتایج در یک ناحیه‌ی همیشه‌باز داخل همین ویجت."
+msgstr "“List mode”: results in a dropdown panel under the search field. “Display in page mode”: results in an always-open region inside this widget."
+
+#: widgets/class-search-widget.php:109
+msgid "نمایش تصویر"
+msgstr "Show image"
+
+#: widgets/class-search-widget.php:117
+msgid "نمایش خلاصه"
+msgstr "Show excerpt"
+
+#: widgets/class-search-widget.php:125
+msgid "متن «نمایش همه»"
+msgstr "“View all” text"
+
+#: widgets/class-search-widget.php:132
+msgid "طرح‌بندی"
+msgstr "Layout"
+
+#: widgets/class-search-widget.php:134
+msgid "انتخاب قالب"
+msgstr "Select template"
+
+#: widgets/class-search-widget.php:138
+msgid "سفارشی"
+msgstr "Custom"
+
+#: widgets/class-search-widget.php:142
+msgid "«قالب پیش‌فرض»: طراحی داخلی افزونه. «سفارشی»: یک قالب ذخیره‌شده در کتابخانه المنتور."
+msgstr "“Default template”: the plugin's built-in design. “Custom”: a template saved in the Elementor library."
+
+#: widgets/class-search-widget.php:145
+msgid "یک قالب انتخاب کنید"
+msgstr "Select a template"
+
+#: widgets/class-search-widget.php:154
+msgid "ویرایش قالب"
+msgstr "Edit template"
+
+#: widgets/class-search-widget.php:158
+msgid "ستون‌ها"
+msgstr "Columns"
+
+#: widgets/class-search-widget.php:166
+msgid "تعداد ستون‌های شبکه‌ی نتایج در «حالت نمایش در صفحه»."
+msgstr "Number of grid columns for the results in “Page” display mode."
+
+#: widgets/class-search-widget.php:172
+msgid "آیتم در هر برگه"
+msgstr "Items per page"
+
+#: widgets/class-search-widget.php:179
+msgid "تعداد نتایجی که برای هر جستجو دریافت و نمایش داده می‌شود."
+msgstr "How many results are fetched and shown for each search."
+
+#: widgets/class-search-widget.php:182
+msgid "کاشی"
+msgstr "Masonry"
+
+#: widgets/class-search-widget.php:188
+msgid "چیدمان آجری (Masonry): کارت‌ها با ارتفاع متفاوت، بدون فضای خالی، زیر هم چیده می‌شوند."
+msgstr "Masonry layout: cards of different heights stack without gaps."
+
+#: widgets/class-search-widget.php:192
+msgid "ارتفاع برابر"
+msgstr "Equal height"
+
+#: widgets/class-search-widget.php:198
+msgid "همه‌ی کارت‌های یک ردیف هم‌ارتفاع می‌شوند."
+msgstr "All cards in a row get the same height."
+
+#: widgets/class-search-widget.php:206
+msgid "کوئری"
+msgstr "Query"
+
+#: widgets/class-search-widget.php:208
+msgid "منبع"
+msgstr "Source"
+
+#: widgets/class-search-widget.php:210 widgets/class-search-widget.php:216
+msgid "پست‌تایپ سفارشی"
+msgstr "Custom post type"
+
+#: widgets/class-search-widget.php:213
+msgid "پست‌تایپ اصلی برای جستجو. با «پست‌تایپ سفارشی» می‌توانید اسلاگ دلخواه وارد کنید."
+msgstr "Main post type to search. Choose “Custom post type” to enter any slug."
+
+#: widgets/class-search-widget.php:218
+msgid "مثلاً sfwd-courses"
+msgstr "e.g. sfwd-courses"
+
+#: widgets/class-search-widget.php:219
+msgid "اسلاگ پست‌تایپ دلخواه. فقط پست‌تایپ‌های عمومیِ قابل جستجو مجازند (در غیر این صورت: نوشته‌ها)."
+msgstr "Post type slug. Only public, searchable post types are allowed (otherwise: posts)."
+
+#: widgets/class-search-widget.php:224
+msgid "شامل توسط"
+msgstr "Include by"
+
+#: widgets/class-search-widget.php:228
+msgid "استثنا"
+msgstr "Exclude"
+
+#: widgets/class-search-widget.php:232
+msgid "شامل"
+msgstr "Include"
+
+#: widgets/class-search-widget.php:238
+msgid "«استثنا»: نتایج فقط شامل آیتم‌هایی که در لیست نیستند. «شامل»: فقط آیتم‌های داخل لیست."
+msgstr "“Exclude”: results include only items not in the list. “Include”: only items in the list."
+
+#: widgets/class-search-widget.php:241
+msgid "دسته‌ها و برچسب‌ها"
+msgstr "Categories & tags"
+
+#: widgets/class-search-widget.php:247
+msgid "ترم‌های موردنظر از همه‌ی طبقه‌بندی‌های عمومی (دسته، برچسب، …) را جستجو و انتخاب کنید. خالی = بدون فیلتر."
+msgstr "Search and select terms from any public taxonomy (categories, tags, …). Empty = no filter."
+
+#: widgets/class-search-widget.php:253
+msgid "همه"
+msgstr "All"
+
+#: widgets/class-search-widget.php:254
+msgid "هفته"
+msgstr "Week"
+
+#: widgets/class-search-widget.php:255
+msgid "ماه"
+msgstr "Month"
+
+#: widgets/class-search-widget.php:256
+msgid "سال"
+msgstr "Year"
+
+#: widgets/class-search-widget.php:260
+msgid "محدوده‌ی زمانی نتایج. پیش‌فرض: همه."
+msgstr "Time range of results. Default: all."
+
+#: widgets/class-search-widget.php:263
+msgid "ترتیب بر اساس"
+msgstr "Order by"
+
+#: widgets/class-search-widget.php:266
+msgid "ارتباط با عبارت جستجو"
+msgstr "Relevance to the search phrase"
+
+#: widgets/class-search-widget.php:269
+msgid "نویسنده"
+msgstr "Author"
+
+#: widgets/class-search-widget.php:270
+msgid "تصادفی"
+msgstr "Random"
+
+#: widgets/class-search-widget.php:271
+msgid "سفارش منو"
+msgstr "Menu order"
+
+#: widgets/class-search-widget.php:277
+msgid "سفارش"
+msgstr "Order"
+
+#: widgets/class-search-widget.php:280
+msgid "نزولی"
+msgstr "Descending"
+
+#: widgets/class-search-widget.php:281
+msgid "صعودی"
+msgstr "Ascending"
+
+#: widgets/class-search-widget.php:288
+msgid "نادیده گرفتن نوشته‌های چسبنده"
+msgstr "Ignore sticky posts"
+
+#: widgets/class-search-widget.php:294
+msgid "اگر خاموش باشد، نوشته‌های چسبنده (Sticky) در ابتدای نتایج قرار می‌گیرند."
+msgstr "When off, sticky posts are moved to the top of the results."
+
+#: widgets/class-search-widget.php:298
+msgid "کوئری ID"
+msgstr "Query ID"
+
+#: widgets/class-search-widget.php:300
+msgid "my_search_query"
+msgstr "my_search_query"
+
+#: widgets/class-search-widget.php:301
+msgid "شناسه‌ی یکتا برای فیلتر کردن آرگومان‌های کوئری در سمت سرور با هوک wgcr_search_query_args/{query_id}."
+msgstr "Unique ID for filtering the query arguments server-side via the wgcr_search_query_args/{query_id} hook."
+
+#: widgets/class-search-widget.php:311
+msgid "هیچکدام"
+msgstr "None"
+
+#: widgets/class-search-widget.php:312
+msgid "شماره‌ها"
+msgstr "Numbers"
+
+#: widgets/class-search-widget.php:313
+msgid "قبلی / بعدی"
+msgstr "Previous / Next"
+
+#: widgets/class-search-widget.php:314
+msgid "بارگذاری با کلیک"
+msgstr "Load on click"
+
+#: widgets/class-search-widget.php:315
+msgid "بارگذاری با اسکرول"
+msgstr "Load on scroll"
+
+#: widgets/class-search-widget.php:319
+msgid "نتایج بیشتر از «آیتم در هر برگه» به صفحه‌های بعدی می‌روند و داخل همان کادر نتایج بارگذاری می‌شوند."
+msgstr "Results beyond “Items per page” go to further pages and load inside the same results panel."
+
+#: widgets/class-search-widget.php:322 widgets/class-search-widget.php:415
+msgid "چیدمان"
+msgstr "Layout"
+
+#: widgets/class-search-widget.php:338 widgets/class-search-widget.php:431 widgets/class-search-widget.php:645
+msgid "کشیده"
+msgstr "Stretch"
+
+#: widgets/class-search-widget.php:354
+msgid "اسپیسر"
+msgstr "Spacer"
+
+#: widgets/class-search-widget.php:358
+msgid "با"
+msgstr "With"
+
+#: widgets/class-search-widget.php:362
+msgid "بدون"
+msgstr "Without"
+
+#: widgets/class-search-widget.php:371
+msgid "دکمه"
+msgstr "Button"
+
+#: widgets/class-search-widget.php:377
+msgid "متن دکمه"
+msgstr "Button text"
+
+#: widgets/class-search-widget.php:384
+msgid "آیکن"
+msgstr "Icon"
+
+#: widgets/class-search-widget.php:392
+msgid "مخفی"
+msgstr "Hidden"
+
+#: widgets/class-search-widget.php:401
+msgid "شناسه دکمه"
+msgstr "Button ID"
+
+#: widgets/class-search-widget.php:404
+msgid "اطمینان حاصل کنید که شناسه (ID) یکتا بوده و در جای دیگری از برگه استفاده نشده است. فقط حروف انگلیسی، عدد و زیرخط بدون فاصله مجاز است."
+msgstr "Make sure the ID is unique and not used elsewhere on the page. Only English letters, numbers and underscores without spaces are allowed."
+
+#: widgets/class-search-widget.php:409
+msgid "پیام نوشته‌های بیشتر موجود نیست"
+msgstr "No more posts message"
+
+#: widgets/class-search-widget.php:447
+msgid "پیام سفارشی"
+msgstr "Custom message"
+
+#: widgets/class-search-widget.php:456
+msgid "متن پیام سفارشی"
+msgstr "Custom message text"
+
+#: widgets/class-search-widget.php:466
+msgid "فیلد جستجو"
+msgstr "Search field"
+
+#: widgets/class-search-widget.php:493
 msgid "رنگ کادر (فوکوس)"
 msgstr "Border color (focus)"
 
-#: widgets/class-search-widget.php:526
+#: widgets/class-search-widget.php:528
 msgid "کادر نتایج"
 msgstr "Results box"
 
-#: widgets/class-search-widget.php:549
+#: widgets/class-search-widget.php:551
 msgid "کانتینر نتایج (حالت نمایش در صفحه)"
 msgstr "Results container (Page display mode)"
 
-#: widgets/class-search-widget.php:555
+#: widgets/class-search-widget.php:557
 msgid "عرض"
 msgstr "Width"
 
-#: widgets/class-search-widget.php:569
+#: widgets/class-search-widget.php:571
 msgid "حداقل ارتفاع"
 msgstr "Min height"
 
-#: widgets/class-search-widget.php:582
+#: widgets/class-search-widget.php:584
 msgid "حداکثر ارتفاع"
 msgstr "Max height"
 
-#: widgets/class-search-widget.php:601
+#: widgets/class-search-widget.php:603
 msgid "مارجین"
 msgstr "Margin"
 
-#: widgets/class-search-widget.php:627
+#: widgets/class-search-widget.php:629
 msgid "تراز افقی"
 msgstr "Horizontal alignment"
 
-#: widgets/class-search-widget.php:662
+#: widgets/class-search-widget.php:664
 msgid "تایپوگرافی وضعیت"
 msgstr "Status typography"
 
-#: widgets/class-search-widget.php:671
+#: widgets/class-search-widget.php:673
 msgid "تایپوگرافی عنوان"
 msgstr "Title typography"
 
-#: widgets/class-search-widget.php:675
+#: widgets/class-search-widget.php:677
 msgid "رنگ عنوان"
 msgstr "Title color"
 
-#: widgets/class-search-widget.php:680
+#: widgets/class-search-widget.php:682
 msgid "پس‌زمینه آیتم فعال/هاور"
 msgstr "Active/hover item background"
 
-#: widgets/class-search-widget.php:686
+#: widgets/class-search-widget.php:688
 msgid "تایپوگرافی خلاصه"
 msgstr "Excerpt typography"
 
-#: widgets/class-search-widget.php:691
+#: widgets/class-search-widget.php:693
 msgid "رنگ خلاصه"
 msgstr "Excerpt color"
 
-#: widgets/class-search-widget.php:697
+#: widgets/class-search-widget.php:699
 msgid "تایپوگرافی «نمایش همه»"
 msgstr "“View all” typography"
 
-#: widgets/class-search-widget.php:702
+#: widgets/class-search-widget.php:704
 msgid "رنگ «نمایش همه»"
 msgstr "“View all” color"
 
-#: widgets/class-search-widget.php:707
+#: widgets/class-search-widget.php:709
 msgid "رنگ «نمایش همه» (هاور)"
 msgstr "“View all” color (hover)"
 

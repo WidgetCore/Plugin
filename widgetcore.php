@@ -2,19 +2,19 @@
 /**
  * Plugin Name:       WidgetCore
  * Plugin URI:        https://github.com/WidgetCore/Plugin
- * Description:       WidgetCore — custom widgets for Elementor: an accessible FAQ accordion with FAQPage schema, and a live AJAX search with a [wgcr_search] shortcode.
- * Version:           0.0.7
+ * Description:       WidgetCore — custom widgets for Elementor: an accessible FAQ accordion with FAQPage schema, a live AJAX search with a [wgcr_search] shortcode, and a customizable comments list and form with a [wgcr_comments] shortcode.
+ * Version:           0.0.8
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Requires Plugins:  elementor
  * Author:            WidgetCore
- * Author URI:        https://WidgetCore.ir
+ * Author URI:        https://github.com/WidgetCore
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       widgetcore
  * Domain Path:       /languages
  * Update URI:        https://github.com/WidgetCore/Plugin
- * Elementor tested up to: 4.3.2
+ * Elementor tested up to: 4.3.3
  *
  * @package WidgetCore
  */
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WGCR_VER', '0.0.7' );
+define( 'WGCR_VER', '0.0.8' );
 define( 'WGCR_FILE', __FILE__ );
 define( 'WGCR_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WGCR_URL', plugin_dir_url( __FILE__ ) );
@@ -63,8 +63,12 @@ function wgcr_svg_icon( $name ) {
 	return isset( $body[ $name ] ) ? $open . $body[ $name ] . '</svg>' : '';
 }
 
+require_once WGCR_DIR . 'includes/style/style-controls.php';
 require_once WGCR_DIR . 'includes/search/search-shared.php';
 require_once WGCR_DIR . 'includes/search/rest-search.php';
+require_once WGCR_DIR . 'includes/comments/comments-shared.php';
+require_once WGCR_DIR . 'includes/comments/comments-policy.php';
+require_once WGCR_DIR . 'includes/comments/comments-shortcode.php';
 require_once WGCR_DIR . 'includes/update/github-updater.php';
 
 add_action( 'init', 'wgcr_load_translations', 1 );
@@ -93,8 +97,9 @@ function wgcr_add_category( $elements_manager ) {
 
 function wgcr_widget_map() {
 	return array(
-		'class-faq-widget.php'    => 'WGCR_FAQ_Widget',
-		'class-search-widget.php' => 'WGCR_Search_Widget',
+		'class-faq-widget.php'      => 'WGCR_FAQ_Widget',
+		'class-search-widget.php'   => 'WGCR_Search_Widget',
+		'class-comments-widget.php' => 'WGCR_Comments_Widget',
 	);
 }
 

@@ -8,6 +8,8 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 
 	class WGCR_Search_Widget extends \Elementor\Widget_Base {
 
+		use WGCR_Size_Controls;
+
 		public function get_name() { return 'wgcr-search'; }
 		public function get_title() { return esc_html__( 'جستجوی زنده', 'widgetcore' ); }
 		public function get_icon() { return 'eicon-search'; }
@@ -492,13 +494,13 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-input:focus' => 'border-color:{{VALUE}};' ),
 			) );
-			$this->add_responsive_control( 'field_radius', array(
+			$this->wgcr_size_control( 'field_radius', array(
 				'label'      => esc_html__( 'گردی گوشه‌ها', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array( '{{WRAPPER}} .wgcr-search .wgcr-search-input' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};' ),
 			) );
-			$this->add_responsive_control( 'field_padding', array(
+			$this->wgcr_size_control( 'field_padding', array(
 				'label'      => esc_html__( 'پدینگ', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', 'em' ),
@@ -514,7 +516,7 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-icon' => 'color:{{VALUE}};' ),
 			) );
-			$this->add_control( 'icon_size', array(
+			$this->wgcr_size_control( 'icon_size', array(
 				'label'      => esc_html__( 'اندازه آیکون', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
@@ -534,7 +536,7 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 				'label'    => esc_html__( 'کادر', 'widgetcore' ),
 				'selector' => '{{WRAPPER}} .wgcr-search .wgcr-search-panel',
 			) );
-			$this->add_responsive_control( 'panel_radius', array(
+			$this->wgcr_size_control( 'panel_radius', array(
 				'label'      => esc_html__( 'گردی گوشه‌ها', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px' ),
@@ -551,7 +553,7 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 				'separator' => 'before',
 				'condition' => array( 'display_mode' => 'page' ),
 			) );
-			$this->add_responsive_control( 'page_container_width', array(
+			$this->wgcr_size_control( 'page_container_width', array(
 				'label'      => esc_html__( 'عرض', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'vw' ),
@@ -565,7 +567,7 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 				),
 				'condition' => array( 'display_mode' => 'page' ),
 			) );
-			$this->add_responsive_control( 'page_container_height', array(
+			$this->wgcr_size_control( 'page_container_height', array(
 				'label'      => esc_html__( 'حداقل ارتفاع', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', 'em', 'rem', 'vh' ),
@@ -578,7 +580,7 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 				),
 				'condition' => array( 'display_mode' => 'page' ),
 			) );
-			$this->add_responsive_control( 'page_container_max_height', array(
+			$this->wgcr_size_control( 'page_container_max_height', array(
 				'label'      => esc_html__( 'حداکثر ارتفاع', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', 'em', 'rem', 'vh' ),
@@ -590,14 +592,14 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 				),
 				'condition' => array( 'display_mode' => 'page' ),
 			) );
-			$this->add_responsive_control( 'page_container_padding', array(
+			$this->wgcr_size_control( 'page_container_padding', array(
 				'label'      => esc_html__( 'پدینگ', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', 'em' ),
 				'selectors'  => array( '{{WRAPPER}} .wgcr-search--page .wgcr-search-panel' => 'padding:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};' ),
 				'condition' => array( 'display_mode' => 'page' ),
 			) );
-			$this->add_responsive_control( 'page_container_margin', array(
+			$this->wgcr_size_control( 'page_container_margin', array(
 				'label'      => esc_html__( 'مارجین', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', 'em' ),
@@ -616,7 +618,7 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 				'selector'  => '{{WRAPPER}} .wgcr-search--page .wgcr-search-panel',
 				'condition' => array( 'display_mode' => 'page' ),
 			) );
-			$this->add_responsive_control( 'page_container_radius', array(
+			$this->wgcr_size_control( 'page_container_radius', array(
 				'label'      => esc_html__( 'گردی گوشه‌ها', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
