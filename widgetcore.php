@@ -8,7 +8,7 @@
  * Requires PHP:      7.4
  * Requires Plugins:  elementor
  * Author:            WidgetCore
- * Author URI:        https://github.com/WidgetCore
+ * Author URI:        https://docs.widgetcore.ir
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       widgetcore

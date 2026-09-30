@@ -73,6 +73,26 @@ function wgcr_update_notes_html( $notes ) {
 	return $html . ( $list ? '</ul>' : '' );
 }
 
+function wgcr_update_tested_wp( $readme = '' ) {
+	static $tested = null;
+	$custom       = '' !== $readme;
+	$path         = $custom ? $readme : dirname( __DIR__, 2 ) . '/readme.txt';
+	$value        = '';
+	if ( is_readable( $path ) ) {
+		$raw = file_get_contents( $path, false, null, 0, 2048 );
+		if ( is_string( $raw ) && preg_match( '/^Tested up to:[ \t]*([0-9][0-9.]*)[ \t]*$/mi', $raw, $m ) && preg_match( '/^\d+\.\d+(\.\d+)?$/', $m[1] ) ) {
+			$value = $m[1];
+		}
+	}
+	if ( ! $custom ) {
+		if ( null === $tested ) {
+			$tested = $value;
+		}
+		$value = $tested;
+	}
+	return $value;
+}
+
 add_filter( 'update_plugins_github.com', 'wgcr_update_check', 10, 3 );
 function wgcr_update_check( $update, $plugin_data, $plugin_file ) {
 	if ( plugin_basename( WGCR_FILE ) !== $plugin_file ) {
@@ -82,7 +102,7 @@ function wgcr_update_check( $update, $plugin_data, $plugin_file ) {
 	if ( ! $release ) {
 		return $update;
 	}
-	return array(
+	$response = array(
 		'slug'         => 'widgetcore',
 		'version'      => $release['version'],
 		'url'          => $release['url'],
@@ -90,6 +110,11 @@ function wgcr_update_check( $update, $plugin_data, $plugin_file ) {
 		'requires'     => isset( $plugin_data['RequiresWP'] ) ? $plugin_data['RequiresWP'] : '',
 		'requires_php' => isset( $plugin_data['RequiresPHP'] ) ? $plugin_data['RequiresPHP'] : '',
 	);
+	$tested = wgcr_update_tested_wp();
+	if ( '' !== $tested ) {
+		$response['tested'] = $tested;
+	}
+	return $response;
 }
 
 add_filter( 'plugins_api', 'wgcr_update_info', 10, 3 );
@@ -105,7 +130,7 @@ function wgcr_update_info( $result, $action, $args ) {
 		require_once ABSPATH . 'wp-admin/includes/plugin.php';
 	}
 	$plugin = get_plugin_data( WGCR_FILE, false, false );
-	return (object) array(
+	$info = (object) array(
 		'name'           => $plugin['Name'],
 		'slug'           => 'widgetcore',
 		'version'        => $release['version'],
@@ -121,6 +146,11 @@ function wgcr_update_info( $result, $action, $args ) {
 			'changelog'   => wp_kses_post( wgcr_update_notes_html( $release['notes'] ) ),
 		),
 	);
+	$tested = wgcr_update_tested_wp();
+	if ( '' !== $tested ) {
+		$info->tested = $tested;
+	}
+	return $info;
 }
 
 add_filter( 'upgrader_source_selection', 'wgcr_update_source', 10, 4 );

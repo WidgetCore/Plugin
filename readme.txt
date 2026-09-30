@@ -2,7 +2,7 @@
 Contributors: mohamadjavadkarimi
 Tags: elementor, faq, accordion, live search, comments
 Requires at least: 6.7
-Tested up to: 7.1
+Tested up to: 7.1.2
 Requires PHP: 7.4
 Stable tag: 0.0.8
 License: GPLv2 or later
