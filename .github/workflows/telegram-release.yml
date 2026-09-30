@@ -17,8 +17,6 @@ jobs:
           message: |
             🚀 نسخه جدید *WidgetCore* منتشر شد !
             🏷 *نسخه :* `${{ github.event.release.tag_name }}`
-            📝 *تغییرات نسخه :*
-            ${{ github.event.release.body }}
             
             🔗 [مشاهده و دانلود نسخه جدید](${{ github.event.release.html_url }})
             🌐 [مشاهده مستندات آنلاین](https://docs.widgetcore.ir/changelog/)
