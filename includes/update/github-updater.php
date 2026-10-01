@@ -42,6 +42,7 @@ function wgcr_update_release() {
 		'tag'       => (string) $data['tag_name'],
 		'version'   => $tag,
 		'package'   => esc_url_raw( $package ),
+		'assets'    => $assets,
 		'url'       => esc_url_raw( ! empty( $data['html_url'] ) ? (string) $data['html_url'] : WGCR_UPDATE_URI . '/releases' ),
 		'notes'     => isset( $data['body'] ) ? (string) $data['body'] : '',
 		'published' => isset( $data['published_at'] ) ? (string) $data['published_at'] : '',
@@ -125,8 +126,40 @@ function wgcr_update_tested_release( $tag ) {
 	return $value;
 }
 
+function wgcr_update_tested_manifest( $release ) {
+	$tag = isset( $release['tag'] ) ? (string) $release['tag'] : '';
+	if ( '' === $tag ) {
+		return '';
+	}
+	$url = '';
+	foreach ( (array) ( isset( $release['assets'] ) ? $release['assets'] : array() ) as $asset ) {
+		if ( is_array( $asset ) && isset( $asset['name'] ) && 'widgetcore.json' === $asset['name'] && isset( $asset['browser_download_url'] ) ) {
+			$url = (string) $asset['browser_download_url'];
+		}
+	}
+	if ( '' === $url || ! in_array( wp_parse_url( $url, PHP_URL_HOST ), array( 'github.com', 'api.github.com' ), true ) ) {
+		return '';
+	}
+	$args = array( 'timeout' => 8 );
+	if ( defined( 'WGCR_GITHUB_TOKEN' ) && WGCR_GITHUB_TOKEN ) {
+		$args['headers'] = array( 'Authorization' => 'Bearer ' . WGCR_GITHUB_TOKEN );
+	}
+	$response = wp_remote_get( $url, $args );
+	if ( is_wp_error( $response ) || 200 !== wp_remote_retrieve_response_code( $response ) ) {
+		return '';
+	}
+	$json = json_decode( wp_remote_retrieve_body( $response ), true );
+	if ( is_array( $json ) && isset( $json['tested'] ) && is_string( $json['tested'] ) && preg_match( '/^\d+\.\d+(\.\d+)?$/', trim( $json['tested'] ) ) ) {
+		return trim( $json['tested'] );
+	}
+	return '';
+}
+
 function wgcr_update_tested_for( $release ) {
-	$tested = wgcr_update_tested_release( isset( $release['tag'] ) ? (string) $release['tag'] : '' );
+	$tested = wgcr_update_tested_manifest( $release );
+	if ( '' === $tested ) {
+		$tested = wgcr_update_tested_release( isset( $release['tag'] ) ? (string) $release['tag'] : '' );
+	}
 	if ( '' === $tested ) {
 		$tested = wgcr_update_tested_wp();
 	}
