@@ -39,6 +39,7 @@ function wgcr_update_release() {
 		return false;
 	}
 	return array(
+		'tag'       => (string) $data['tag_name'],
 		'version'   => $tag,
 		'package'   => esc_url_raw( $package ),
 		'url'       => esc_url_raw( ! empty( $data['html_url'] ) ? (string) $data['html_url'] : WGCR_UPDATE_URI . '/releases' ),
@@ -93,6 +94,45 @@ function wgcr_update_tested_wp( $readme = '' ) {
 	return $value;
 }
 
+function wgcr_update_tested_release( $tag ) {
+	static $cache = array();
+	if ( '' === $tag ) {
+		return '';
+	}
+	if ( isset( $cache[ $tag ] ) ) {
+		return $cache[ $tag ];
+	}
+	$args = array(
+		'timeout' => 8,
+		'headers' => array( 'Accept' => 'application/vnd.github.raw+json' ),
+	);
+	if ( defined( 'WGCR_GITHUB_TOKEN' ) && WGCR_GITHUB_TOKEN ) {
+		$args['headers']['Authorization'] = 'Bearer ' . WGCR_GITHUB_TOKEN;
+	}
+	$url      = str_replace( '/releases/latest', '/contents/readme.txt', WGCR_UPDATE_API ) . '?ref=' . rawurlencode( $tag );
+	$response = wp_remote_get( $url, $args );
+	if ( is_wp_error( $response ) || 200 !== wp_remote_retrieve_response_code( $response ) ) {
+		return '';
+	}
+	$raw   = (string) wp_remote_retrieve_body( $response );
+	$value = '';
+	if ( '' !== $raw && preg_match( '/^Tested up to:[ \t]*([0-9][0-9.]*)[ \t]*$/mi', substr( $raw, 0, 2048 ), $m ) && preg_match( '/^\d+\.\d+(\.\d+)?$/', $m[1] ) ) {
+		$value = $m[1];
+	}
+	if ( '' !== $value ) {
+		$cache[ $tag ] = $value;
+	}
+	return $value;
+}
+
+function wgcr_update_tested_for( $release ) {
+	$tested = wgcr_update_tested_release( isset( $release['tag'] ) ? (string) $release['tag'] : '' );
+	if ( '' === $tested ) {
+		$tested = wgcr_update_tested_wp();
+	}
+	return $tested;
+}
+
 add_filter( 'update_plugins_github.com', 'wgcr_update_check', 10, 3 );
 function wgcr_update_check( $update, $plugin_data, $plugin_file ) {
 	if ( plugin_basename( WGCR_FILE ) !== $plugin_file ) {
@@ -110,9 +150,11 @@ function wgcr_update_check( $update, $plugin_data, $plugin_file ) {
 		'requires'     => isset( $plugin_data['RequiresWP'] ) ? $plugin_data['RequiresWP'] : '',
 		'requires_php' => isset( $plugin_data['RequiresPHP'] ) ? $plugin_data['RequiresPHP'] : '',
 	);
-	$tested = wgcr_update_tested_wp();
-	if ( '' !== $tested ) {
-		$response['tested'] = $tested;
+	if ( version_compare( $release['version'], isset( $plugin_data['Version'] ) ? (string) $plugin_data['Version'] : '0', '>' ) ) {
+		$tested = wgcr_update_tested_for( $release );
+		if ( '' !== $tested ) {
+			$response['tested'] = $tested;
+		}
 	}
 	return $response;
 }
@@ -146,7 +188,7 @@ function wgcr_update_info( $result, $action, $args ) {
 			'changelog'   => wp_kses_post( wgcr_update_notes_html( $release['notes'] ) ),
 		),
 	);
-	$tested = wgcr_update_tested_wp();
+	$tested = wgcr_update_tested_for( $release );
 	if ( '' !== $tested ) {
 		$info->tested = $tested;
 	}
