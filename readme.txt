@@ -1,22 +1,34 @@
 === WidgetCore ===
 Contributors: mohamadjavadkarimi
-Tags: elementor, faq, accordion, live search, comments
+Tags: elementor, faq, live search, comments, tabs, counter, progress bar, alert, price table, social icons, breadcrumb, share
 Requires at least: 6.7
 Tested up to: 7.1.3
 Requires PHP: 7.4
-Stable tag: 0.0.9
+Stable tag: 0.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Free Elementor widgets: an accessible FAQ accordion, an instant live search with a shortcode, and a comments list with form.
+Free Elementor widgets: FAQ accordion, live search, comments, tabs, counter, progress bar, alert, icon box, price table, social icons, breadcrumbs and social share buttons.
 
 == Description ==
 
-WidgetCore adds a new widget category to the Elementor panel with three widgets:
+WidgetCore adds a new widget category to the Elementor panel with twelve widgets:
 
 * **FAQ** (`wgcr-faq`) – accordion or toggle mode, plus / chevron / custom icon, H2–H4 or DIV question tags, automatic FAQPage JSON-LD schema, full ARIA (button + region), and complete style controls.
 * **Live Search** (`wgcr-search`) – instant results while typing (REST API, debounced), keyboard navigation (Arrow Up/Down, Enter, Escape), combobox/listbox accessibility, thumbnails and excerpts, a "view all results" link, and multiple instances per page. Works for posts, courses or any public custom post type. Includes a `display_mode` option ("modal" dropdown under the input or "page" inline region inside the widget container), query filters (terms include/exclude, date range, order, sticky posts, query ID hook), pagination (numbers, previous/next, load more, infinite scroll), masonry / equal-height layouts and optional Elementor templates for each result.
 * **Comments** (`wgcr-comments`) – the approved comments of the current post with replies, optional pagination and avatars, plus a configurable comment form: choose the fields, labels, required state, notes and layout, with a full Style tab. The form posts to WordPress' own comment handler, so moderation, spam checks and the login requirement from Settings → Discussion keep working. The widget can make name and email optional and can only make login stricter. It stores nothing of its own and loads no script.
+
+* **Tabs** (`wgcr-tabs`) – horizontal or vertical tabs with full ARIA (`tablist`, `tab`, `tabpanel`), roving TabIndex, Arrow/Home/End keyboard navigation, wrap-to-multiple-rows, empty tabs skipped safely and a tiny dependency-free script loaded only on pages that use it. Each tab's content is visual-editor text, a saved Elementor template, or raw custom HTML printed unfiltered exactly like Elementor's own HTML widget (scripts run).
+* **Counter** (`wgcr-counter`) – animated number counter (start, end, duration, prefix/suffix, title and description) that runs once when scrolled into view with an ease-out curve, respects reduced-motion, needs no script when JS is off (the end number is rendered server-side) and never re-animates on tab switches.
+* **Progress Bar** (`wgcr-progress`) – one or more percentage bars (repeater) with per-bar color, `progressbar` ARIA, animated fill, RTL-safe origin and zero JavaScript.
+* **Alert** (`wgcr-alert`) – info/success/warning/danger message boxes with automatic icons, `role="status"` or `role="alert"`, an accessible dismiss button and a one-time dismissal script.
+* **Icon Box** (`wgcr-iconbox`) – icon (library or custom SVG) above or beside a title and description, optional title link with `noopener noreferrer nofollow`, hover states and no script.
+* **Price Table** (`wgcr-pricetable`) – plan card with featured state and badge, currency symbol, period, included/excluded feature list and a call-to-action button; pure CSS, no script.
+* **Social Icons** (`wgcr-social`) – social/contact link row (repeater) with SVG icons, labels, new-tab and nofollow switches, wrapped in an accessible `nav` landmark and no script.
+* **Breadcrumb** (`wgcr-breadcrumb`) – a navigation trail for the current page: automatic mode prefers the Yoast SEO or Rank Math breadcrumb when either plugin is active, otherwise the widget builds the trail itself (home, page ancestors, the primary category of single posts, archive/author/search/404 labels) and can print BreadcrumbList JSON-LD schema. Accessible `nav` + `ol` markup, `aria-current` on the last crumb, eight separators or a custom one, and no script.
+* **Share** (`wgcr-share`) – social share buttons rendered server-side from the current permalink and title: Telegram, WhatsApp, Eitaa, X (Twitter), Facebook, LinkedIn and email, plus a copy-link button with clipboard support and spoken feedback, and unlimited custom networks (Bale, Rubika, Soroush or anything else) defined by a share URL pattern with `{url}` / `{title}` placeholders. Icon-only or labeled, three shapes, full Normal/Hover color controls, `rel="noopener noreferrer"` on new-tab links and one tiny script loaded only on pages that use it.
+
+Every link (URL) control of the widgets – the Icon Box link, the Price Table button and each Social Icons profile URL – supports Elementor dynamic tags, exactly like Elementor's own widgets.
 
 The live search is also available as a shortcode:
 
@@ -25,6 +37,10 @@ The live search is also available as a shortcode:
 The comments list and form are available as a shortcode too:
 
 `[wgcr_comments form="yes" list="yes" per_page="20"]`
+
+Saved Elementor templates can be printed anywhere with a third shortcode (used by the Tabs widget for its template content type):
+
+`[wgcr_template id="123"]`
 
 The plugin has no settings page and stores no options. The widgets make no external requests of their own; the only server-side request is the update check against the GitHub API. If the Comments widget shows avatars, WordPress loads them from Gravatar in the visitor's browser; set the widget's avatar option to hide them.
 
@@ -63,9 +79,19 @@ The plugin header declares `Update URI: https://github.com/WidgetCore/Plugin`, s
 
 = How are versions numbered? =
 
-Every released ZIP increases the version by exactly one step: `0.0.1` → `0.0.2` … `0.0.9` → `0.1.0` → `0.1.1` … `0.9.9` → `1.0.0`. The changelog below lists every step.
+The version derives from the number of registered widgets: `0.(N div 10).(N mod 10)`, so 10 widgets → `0.1.0`, 12 → `0.1.2`, 17 → `0.1.7`. Versions `0.0.1` through `0.0.9` were released under the previous rule (a per-release counter; `0.0.9` is the bridge release) and a released version number is never reused or lowered, so intermediate numbers that were never published as a ZIP may be skipped — the changes planned for the unreleased `0.1.0` and `0.1.1` shipped together in the single `0.1.2` release listed below.
 
 == Changelog ==
+
+= 0.1.2 =
+* Seven new widgets, all built on the shared `WGCR_Size_Controls` trait with the same responsive size rules (Normal/Hover tabs, `_tablet`/`_mobile` suffixes) as the existing widgets: Tabs (`wgcr-tabs`, accessible tablist with keyboard navigation and a tiny dependency-free script), Counter (`wgcr-counter`, IntersectionObserver animation with reduced-motion and no-JS fallbacks), Progress Bar (`wgcr-progress`, repeater bars with `progressbar` ARIA, no script), Alert (`wgcr-alert`, status/alert roles with accessible dismiss), Icon Box (`wgcr-iconbox`, safe SVG output, no script), Price Table (`wgcr-pricetable`, featured plan and included/excluded features, no script) and Social Icons (`wgcr-social`, nav landmark, new-tab and nofollow switches, no script).
+* Every new widget registers its CSS and JS only on pages that use it; five of the seven ship no JavaScript at all.
+* All user-facing strings translated to Persian and English (POT regenerated); widget SVG icons are printed inline and localized per language.
+* Two more new widgets on the same trait and pipeline: Breadcrumb (`wgcr-breadcrumb`) – SEO bridge that prints the Yoast SEO (`[wpseo_breadcrumb]`) or Rank Math (`[rank_math_breadcrumb]`) trail when installed and otherwise builds its own accessible trail with optional BreadcrumbList JSON-LD schema, eight built-in separators plus a custom one, home/ancestors/primary-category/archive/search/404 labels, and no script; Share (`wgcr-share`) – server-rendered share buttons for Telegram, WhatsApp, Eitaa, X, Facebook, LinkedIn and email built from the current permalink and title, a copy-link button using the Clipboard API (with a legacy `execCommand` fallback) and `aria-live` feedback, and unlimited custom networks (Bale, Rubika, Soroush, …) via a share URL pattern with `{url}` / `{title}` placeholders and a selectable icon.
+* Tabs: every tab now chooses its content type – visual-editor text, a saved Elementor template (printed through the new `[wgcr_template]` shortcode, styles included), or raw custom HTML printed unfiltered exactly like Elementor's HTML widget (scripts execute; the editor shows a live preview of the code and a placeholder for templates).
+* Dynamic tags: every URL control (Icon Box link, Price Table button, each Social Icons profile URL) now shows Elementor's dynamic-tags picker like Elementor's own widgets.
+* Hover states fixed across the affected widgets: the Alert close button, the Social Icons links and the Price Table button keep their hover styles when Normal-state colors are set – hover styling now runs through dedicated CSS variables with Normal/Hover control tabs, new hover controls were added (Alert close hover color; Price Table hover background/text, which also switches the default brightness effect off), the Price Table button gained a smooth hover transition honoring `prefers-reduced-motion`, and the Share/Breadcrumb widgets are built on the same variable pattern from day one.
+* Version follows the widget-count rule: 12 registered widgets → 0.1.2. The unreleased `0.1.0` (10 widgets) and `0.1.1` (11 widgets) numbers were merged into this single release.
 
 = 0.0.9 =
 * Shared control library: the `WGCR_Size_Controls` trait now carries every repeated Elementor control pattern — sections, switcher, text, number, select, heading, color, typography (font weight/size/line-height shorthand), border (type/width/color shorthand), box shadow, dimensions, slider and ready-made style box/text/state groups. All three widgets (FAQ, Live Search, Comments) are refactored onto it with identical control ids, defaults and selectors, so new widgets stay short and uniform instead of copying hundreds of control lines.
