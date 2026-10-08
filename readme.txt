@@ -2,9 +2,9 @@
 Contributors: mohamadjavadkarimi
 Tags: elementor, faq, accordion, live search, comments
 Requires at least: 6.7
-Tested up to: 7.1.2
+Tested up to: 7.1.3
 Requires PHP: 7.4
-Stable tag: 0.0.8
+Stable tag: 0.0.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,10 @@ The plugin header declares `Update URI: https://github.com/WidgetCore/Plugin`, s
 Every released ZIP increases the version by exactly one step: `0.0.1` → `0.0.2` … `0.0.9` → `0.1.0` → `0.1.1` … `0.9.9` → `1.0.0`. The changelog below lists every step.
 
 == Changelog ==
+
+= 0.0.9 =
+* Shared control library: the `WGCR_Size_Controls` trait now carries every repeated Elementor control pattern — sections, switcher, text, number, select, heading, color, typography (font weight/size/line-height shorthand), border (type/width/color shorthand), box shadow, dimensions, slider and ready-made style box/text/state groups. All three widgets (FAQ, Live Search, Comments) are refactored onto it with identical control ids, defaults and selectors, so new widgets stay short and uniform instead of copying hundreds of control lines.
+* Versioning rule change: the plugin version now derives from the number of registered widgets — `0.(N div 10).(N mod 10)`, so 10 widgets → 0.1.0, 17 → 0.1.7, 34 → 0.3.4. Released counter versions (up to 0.0.8) are never downgraded, so 0.0.9 is the bridge release and the formula takes over at 10 widgets. The static test derives the expected version from `wgcr_widget_map()`, keeps the map in sync with the `src/widgets/` folder and requires every widget class to use the shared trait.
 
 = 0.0.8 =
 * New Comments widget (`wgcr-comments`) and `[wgcr_comments]` shortcode: approved comments of the current post with replies, optional pagination and avatars, a configurable comment form (fields, labels, required state, notes, layout) and a full Style tab. Comments are sent to WordPress' own handler, so moderation, spam checks and login requirements keep working; the widget can make name and email optional and can only make login stricter. No option, table, cookie or script of its own.

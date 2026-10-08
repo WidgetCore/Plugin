@@ -140,7 +140,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 
 		protected function register_controls() {
 
-			$this->start_controls_section( 'sec_items', array( 'label' => esc_html__( 'سوال‌ها', 'widgetcore' ) ) );
+			$this->wgcr_content_section( 'sec_items', esc_html__( 'سوال‌ها', 'widgetcore' ) );
 			$rep = new \Elementor\Repeater();
 			$rep->add_control( 'question', array(
 				'label'       => esc_html__( 'عنوان سوال', 'widgetcore' ),
@@ -192,7 +192,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 			) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sec_behavior', array( 'label' => esc_html__( 'تنظیمات رفتار', 'widgetcore' ) ) );
+			$this->wgcr_content_section( 'sec_behavior', esc_html__( 'تنظیمات رفتار', 'widgetcore' ) );
 			$this->add_control( 'mode', array(
 				'label'   => esc_html__( 'حالت باز شدن', 'widgetcore' ),
 				'type'    => \Elementor\Controls_Manager::SELECT,
@@ -238,7 +238,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 			) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sec_seo', array( 'label' => esc_html__( 'سئو و ساختار', 'widgetcore' ) ) );
+			$this->wgcr_content_section( 'sec_seo', esc_html__( 'سئو و ساختار', 'widgetcore' ) );
 			$this->add_control( 'q_tag', array(
 				'label'   => esc_html__( 'تگ عنوان سوال', 'widgetcore' ),
 				'type'    => \Elementor\Controls_Manager::SELECT,
@@ -261,7 +261,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 			) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sty_layout', array( 'label' => esc_html__( 'طرح کلی', 'widgetcore' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ) );
+			$this->wgcr_style_section( 'sty_layout', esc_html__( 'طرح کلی', 'widgetcore' ) );
 			$this->wgcr_size_control( 'max_width', array(
 				'label'      => esc_html__( 'حداکثر عرض', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
@@ -334,58 +334,21 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 			) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sty_body', array( 'label' => esc_html__( 'بدنه کارت', 'widgetcore' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ) );
+			$this->wgcr_style_section( 'sty_body', esc_html__( 'بدنه کارت', 'widgetcore' ) );
 			$this->start_controls_tabs( 'body_tabs' );
 			$this->start_controls_tab( 'body_closed', array( 'label' => esc_html__( 'بسته', 'widgetcore' ) ) );
-			$this->add_control( 'box_bg', array(
-				'label'     => esc_html__( 'پس‌زمینه', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => 'rgba(255, 255, 255, 0.72)',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-item' => 'background:{{VALUE}};' ),
+			$this->wgcr_color_control( 'box_bg', esc_html__( 'پس‌زمینه', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-item', 'background', array( 'default' => 'rgba(255, 255, 255, 0.72)' ) );
+			$this->wgcr_border_control( 'box_border', '{{WRAPPER}} .wgcr-faq-item', array(), array(
+				'type'  => 'solid',
+				'width' => '1',
+				'color' => 'rgba(255, 255, 255, 0.7)',
 			) );
-			$this->add_group_control( \Elementor\Group_Control_Border::get_type(), array(
-				'name'           => 'box_border',
-				'label'          => esc_html__( 'کادر', 'widgetcore' ),
-				'selector'       => '{{WRAPPER}} .wgcr-faq-item',
-				'fields_options' => array(
-					'border' => array( 'default' => 'solid' ),
-					'width'  => array(
-						'default' => array(
-							'top'      => '1',
-							'right'    => '1',
-							'bottom'   => '1',
-							'left'     => '1',
-							'unit'     => 'px',
-							'isLinked' => true,
-						),
-					),
-					'color'  => array( 'default' => 'rgba(255, 255, 255, 0.7)' ),
-				),
-			) );
-			$this->add_group_control( \Elementor\Group_Control_Box_Shadow::get_type(), array(
-				'name'     => 'box_shadow',
-				'label'    => esc_html__( 'سایه', 'widgetcore' ),
-				'selector' => '{{WRAPPER}} .wgcr-faq-item',
-			) );
+			$this->wgcr_shadow_control( 'box_shadow', '{{WRAPPER}} .wgcr-faq-item' );
 			$this->end_controls_tab();
 			$this->start_controls_tab( 'body_open', array( 'label' => esc_html__( 'باز', 'widgetcore' ) ) );
-			$this->add_control( 'open_bg', array(
-				'label'     => esc_html__( 'پس‌زمینه', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-item.open' => 'background:{{VALUE}};' ),
-			) );
-			$this->add_control( 'open_border', array(
-				'label'     => esc_html__( 'رنگ کادر', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-item.open' => 'border-color:{{VALUE}};' ),
-			) );
-			$this->add_group_control( \Elementor\Group_Control_Box_Shadow::get_type(), array(
-				'name'     => 'open_shadow',
-				'label'    => esc_html__( 'سایه', 'widgetcore' ),
-				'selector' => '{{WRAPPER}} .wgcr-faq-item.open',
-			) );
+			$this->wgcr_color_control( 'open_bg', esc_html__( 'پس‌زمینه', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-item.open', 'background' );
+			$this->wgcr_color_control( 'open_border', esc_html__( 'رنگ کادر', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-item.open', 'border-color' );
+			$this->wgcr_shadow_control( 'open_shadow', '{{WRAPPER}} .wgcr-faq-item.open' );
 			$this->end_controls_tab();
 			$this->end_controls_tabs();
 			$this->wgcr_size_control( 'glass_blur', array(
@@ -420,72 +383,22 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 			) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sty_title', array( 'label' => esc_html__( 'عنوان', 'widgetcore' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ) );
+			$this->wgcr_style_section( 'sty_title', esc_html__( 'عنوان', 'widgetcore' ) );
 			$this->start_controls_tabs( 'title_tabs' );
 			$this->start_controls_tab( 'title_closed', array( 'label' => esc_html__( 'بسته', 'widgetcore' ) ) );
-			$this->add_control( 'q_row_bg', array(
-				'label'     => esc_html__( 'پس‌زمینه ردیف عنوان', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-q' => 'background:{{VALUE}};' ),
-			) );
-			$this->add_control( 'q_color', array(
-				'label'     => esc_html__( 'رنگ متن', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '#1F2937',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-qtext' => 'color:{{VALUE}};' ),
-			) );
-			$this->add_group_control( \Elementor\Group_Control_Box_Shadow::get_type(), array(
-				'name'     => 'q_row_shadow',
-				'label'    => esc_html__( 'سایه', 'widgetcore' ),
-				'selector' => '{{WRAPPER}} .wgcr-faq-q',
-			) );
+			$this->wgcr_color_control( 'q_row_bg', esc_html__( 'پس‌زمینه ردیف عنوان', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-q', 'background' );
+			$this->wgcr_color_control( 'q_color', esc_html__( 'رنگ متن', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-qtext', 'color', array( 'default' => '#1F2937' ) );
+			$this->wgcr_shadow_control( 'q_row_shadow', '{{WRAPPER}} .wgcr-faq-q' );
 			$this->end_controls_tab();
 			$this->start_controls_tab( 'title_open', array( 'label' => esc_html__( 'باز', 'widgetcore' ) ) );
-			$this->add_control( 'q_row_bg_open', array(
-				'label'     => esc_html__( 'پس‌زمینه ردیف عنوان', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-q' => 'background:{{VALUE}};' ),
-			) );
-			$this->add_control( 'q_color_open', array(
-				'label'     => esc_html__( 'رنگ متن', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-qtext' => 'color:{{VALUE}};' ),
-			) );
-			$this->add_group_control( \Elementor\Group_Control_Box_Shadow::get_type(), array(
-				'name'     => 'q_row_shadow_open',
-				'label'    => esc_html__( 'سایه', 'widgetcore' ),
-				'selector' => '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-q',
-			) );
+			$this->wgcr_color_control( 'q_row_bg_open', esc_html__( 'پس‌زمینه ردیف عنوان', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-q', 'background' );
+			$this->wgcr_color_control( 'q_color_open', esc_html__( 'رنگ متن', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-qtext', 'color' );
+			$this->wgcr_shadow_control( 'q_row_shadow_open', '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-q' );
 			$this->end_controls_tab();
 			$this->end_controls_tabs();
-			$this->add_control( 'q_color_hover', array(
-				'label'     => esc_html__( 'رنگ متن (هاور)', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-q:hover .wgcr-faq-qtext' => 'color:{{VALUE}};' ),
-			) );
-			$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array(
-				'name'           => 'q_typo',
-				'label'          => esc_html__( 'تایپوگرافی', 'widgetcore' ),
-				'selector'       => '{{WRAPPER}} .wgcr-faq-qtext',
-				'fields_options' => array(
-					'font_weight' => array( 'default' => '700' ),
-					'font_size'   => array(
-						'default' => array(
-							'size' => 16,
-							'unit' => 'px',
-						),
-					),
-				),
-			) );
-			$this->add_group_control( \Elementor\Group_Control_Border::get_type(), array(
-				'name'     => 'q_row_border',
-				'label'    => esc_html__( 'کادر ردیف عنوان', 'widgetcore' ),
-				'selector' => '{{WRAPPER}} .wgcr-faq-q',
-			) );
+			$this->wgcr_color_control( 'q_color_hover', esc_html__( 'رنگ متن (هاور)', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-q:hover .wgcr-faq-qtext', 'color' );
+			$this->wgcr_typography_control( 'q_typo', '{{WRAPPER}} .wgcr-faq-qtext', array( 'weight' => '700', 'size' => 16 ) );
+			$this->wgcr_border_control( 'q_row_border', '{{WRAPPER}} .wgcr-faq-q', array( 'label' => esc_html__( 'کادر ردیف عنوان', 'widgetcore' ) ) );
 			$this->wgcr_size_control( 'q_row_radius', array(
 				'label'      => esc_html__( 'گردی گوشه‌های ردیف عنوان', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
@@ -518,55 +431,19 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 			) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sty_answer', array( 'label' => esc_html__( 'کارت توضیحات', 'widgetcore' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ) );
+			$this->wgcr_style_section( 'sty_answer', esc_html__( 'کارت توضیحات', 'widgetcore' ) );
 			$this->start_controls_tabs( 'ans_tabs' );
 			$this->start_controls_tab( 'ans_closed', array( 'label' => esc_html__( 'بسته', 'widgetcore' ) ) );
-			$this->add_control( 'a_bg', array(
-				'label'     => esc_html__( 'پس‌زمینه', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-a' => 'background:{{VALUE}};' ),
-			) );
-			$this->add_control( 'a_color', array(
-				'label'     => esc_html__( 'رنگ متن', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '#6B7280',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-atext, {{WRAPPER}} .wgcr-faq-atext p' => 'color:{{VALUE}};' ),
-			) );
+			$this->wgcr_color_control( 'a_bg', esc_html__( 'پس‌زمینه', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-a', 'background' );
+			$this->wgcr_color_control( 'a_color', esc_html__( 'رنگ متن', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-atext, {{WRAPPER}} .wgcr-faq-atext p', 'color', array( 'default' => '#6B7280' ) );
 			$this->end_controls_tab();
 			$this->start_controls_tab( 'ans_open', array( 'label' => esc_html__( 'باز', 'widgetcore' ) ) );
-			$this->add_control( 'a_bg_open', array(
-				'label'     => esc_html__( 'پس‌زمینه', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-a' => 'background:{{VALUE}};' ),
-			) );
-			$this->add_control( 'a_color_open', array(
-				'label'     => esc_html__( 'رنگ متن', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-atext, {{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-atext p' => 'color:{{VALUE}};' ),
-			) );
+			$this->wgcr_color_control( 'a_bg_open', esc_html__( 'پس‌زمینه', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-a', 'background' );
+			$this->wgcr_color_control( 'a_color_open', esc_html__( 'رنگ متن', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-atext, {{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-atext p', 'color' );
 			$this->end_controls_tab();
 			$this->end_controls_tabs();
-			$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array(
-				'name'           => 'a_typo',
-				'label'          => esc_html__( 'تایپوگرافی', 'widgetcore' ),
-				'selector'       => '{{WRAPPER}} .wgcr-faq-atext, {{WRAPPER}} .wgcr-faq-atext p',
-				'fields_options' => array(
-					'font_size' => array(
-						'default' => array(
-							'size' => 15,
-							'unit' => 'px',
-						),
-					),
-				),
-			) );
-			$this->add_group_control( \Elementor\Group_Control_Border::get_type(), array(
-				'name'     => 'a_border',
-				'label'    => esc_html__( 'کادر', 'widgetcore' ),
-				'selector' => '{{WRAPPER}} .wgcr-faq-a',
-			) );
+$this->wgcr_typography_control( 'a_typo', '{{WRAPPER}} .wgcr-faq-atext, {{WRAPPER}} .wgcr-faq-atext p', array( 'size' => 15 ) );
+			$this->wgcr_border_control( 'a_border', '{{WRAPPER}} .wgcr-faq-a' );
 			$this->wgcr_size_control( 'a_radius', array(
 				'label'      => esc_html__( 'گردی گوشه‌ها', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
@@ -599,7 +476,7 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 			) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sty_icon', array( 'label' => esc_html__( 'آیکون', 'widgetcore' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ) );
+			$this->wgcr_style_section( 'sty_icon', esc_html__( 'آیکون', 'widgetcore' ) );
 			$this->wgcr_size_control( 'ic_gap', array(
 				'label'      => esc_html__( 'فاصله از متن', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
@@ -687,32 +564,12 @@ if ( ! class_exists( 'WGCR_FAQ_Widget' ) && class_exists( '\Elementor\Widget_Bas
 			) );
 			$this->start_controls_tabs( 'ic_tabs' );
 			$this->start_controls_tab( 'ic_normal', array( 'label' => esc_html__( 'عادی', 'widgetcore' ) ) );
-			$this->add_control( 'ic_bg', array(
-				'label'     => esc_html__( 'پس‌زمینه', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '#EBF3FC',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-ic' => 'background:{{VALUE}};' ),
-			) );
-			$this->add_control( 'ic_color', array(
-				'label'     => esc_html__( 'رنگ آیکون', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '#2E86DE',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-ic' => 'color:{{VALUE}};' ),
-			) );
+			$this->wgcr_color_control( 'ic_bg', esc_html__( 'پس‌زمینه', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-ic', 'background', array( 'default' => '#EBF3FC' ) );
+			$this->wgcr_color_control( 'ic_color', esc_html__( 'رنگ آیکون', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-ic', 'color', array( 'default' => '#2E86DE' ) );
 			$this->end_controls_tab();
 			$this->start_controls_tab( 'ic_open', array( 'label' => esc_html__( 'حالت باز', 'widgetcore' ) ) );
-			$this->add_control( 'ic_bg_open', array(
-				'label'     => esc_html__( 'پس‌زمینه', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '#2E86DE',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-ic' => 'background:{{VALUE}};' ),
-			) );
-			$this->add_control( 'ic_color_open', array(
-				'label'     => esc_html__( 'رنگ آیکون', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'default'   => '#ffffff',
-				'selectors' => array( '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-ic' => 'color:{{VALUE}};' ),
-			) );
+			$this->wgcr_color_control( 'ic_bg_open', esc_html__( 'پس‌زمینه', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-ic', 'background', array( 'default' => '#2E86DE' ) );
+			$this->wgcr_color_control( 'ic_color_open', esc_html__( 'رنگ آیکون', 'widgetcore' ), '{{WRAPPER}} .wgcr-faq-item.open .wgcr-faq-ic', 'color', array( 'default' => '#ffffff' ) );
 			$this->end_controls_tab();
 			$this->end_controls_tabs();
 			$this->end_controls_section();

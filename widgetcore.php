@@ -3,7 +3,7 @@
  * Plugin Name:       WidgetCore
  * Plugin URI:        https://github.com/WidgetCore/Plugin
  * Description:       WidgetCore — custom widgets for Elementor: an accessible FAQ accordion with FAQPage schema, a live AJAX search with a [wgcr_search] shortcode, and a customizable comments list and form with a [wgcr_comments] shortcode.
- * Version:           0.0.8
+ * Version:           0.0.9
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Requires Plugins:  elementor
@@ -14,7 +14,7 @@
  * Text Domain:       widgetcore
  * Domain Path:       /languages
  * Update URI:        https://github.com/WidgetCore/Plugin
- * Elementor tested up to: 4.3.3
+ * Elementor tested up to: 4.3.4
  *
  * @package WidgetCore
  */
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WGCR_VER', '0.0.8' );
+define( 'WGCR_VER', '0.0.9' );
 define( 'WGCR_FILE', __FILE__ );
 define( 'WGCR_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WGCR_URL', plugin_dir_url( __FILE__ ) );

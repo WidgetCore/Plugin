@@ -86,7 +86,7 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 
 		protected function register_controls() {
 
-			$this->start_controls_section( 'sec_general', array( 'label' => esc_html__( 'عمومی', 'widgetcore' ) ) );
+			$this->wgcr_content_section( 'sec_general', esc_html__( 'عمومی', 'widgetcore' ) );
 			$this->add_control( 'display_mode', array(
 				'label'       => esc_html__( 'حالت نمایش نتایج', 'widgetcore' ),
 				'type'        => \Elementor\Controls_Manager::SELECT,
@@ -129,7 +129,7 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 			) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sec_layout', array( 'label' => esc_html__( 'طرح‌بندی', 'widgetcore' ) ) );
+			$this->wgcr_content_section( 'sec_layout', esc_html__( 'طرح‌بندی', 'widgetcore' ) );
 			$this->add_control( 'template_mode', array(
 				'label'       => esc_html__( 'انتخاب قالب', 'widgetcore' ),
 				'type'        => \Elementor\Controls_Manager::SELECT,
@@ -203,7 +203,7 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 			) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sec_query', array( 'label' => esc_html__( 'کوئری', 'widgetcore' ) ) );
+			$this->wgcr_content_section( 'sec_query', esc_html__( 'کوئری', 'widgetcore' ) );
 			$this->add_control( 'source', array(
 				'label'       => esc_html__( 'منبع', 'widgetcore' ),
 				'type'        => \Elementor\Controls_Manager::SELECT,
@@ -303,7 +303,7 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 			) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sec_pagination', array( 'label' => esc_html__( 'صفحه‌بندی', 'widgetcore' ) ) );
+			$this->wgcr_content_section( 'sec_pagination', esc_html__( 'صفحه‌بندی', 'widgetcore' ) );
 			$this->add_control( 'pagination_type', array(
 				'label'       => esc_html__( 'صفحه‌بندی', 'widgetcore' ),
 				'type'        => \Elementor\Controls_Manager::SELECT,
@@ -463,37 +463,13 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 			) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sty_field', array( 'label' => esc_html__( 'فیلد جستجو', 'widgetcore' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ) );
-			$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array(
-				'name'     => 'field_typo',
-				'label'    => esc_html__( 'تایپوگرافی', 'widgetcore' ),
-				'selector' => '{{WRAPPER}} .wgcr-search .wgcr-search-input',
-			) );
-			$this->add_control( 'field_color', array(
-				'label'     => esc_html__( 'رنگ متن', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-input' => 'color:{{VALUE}};' ),
-			) );
-			$this->add_control( 'field_ph_color', array(
-				'label'     => esc_html__( 'رنگ متن راهنما', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-input::placeholder' => 'color:{{VALUE}};' ),
-			) );
-			$this->add_control( 'field_bg', array(
-				'label'     => esc_html__( 'پس‌زمینه', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-input' => 'background-color:{{VALUE}};' ),
-			) );
-			$this->add_group_control( \Elementor\Group_Control_Border::get_type(), array(
-				'name'     => 'field_border',
-				'label'    => esc_html__( 'کادر', 'widgetcore' ),
-				'selector' => '{{WRAPPER}} .wgcr-search .wgcr-search-input',
-			) );
-			$this->add_control( 'field_focus_border', array(
-				'label'     => esc_html__( 'رنگ کادر (فوکوس)', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-input:focus' => 'border-color:{{VALUE}};' ),
-			) );
+			$this->wgcr_style_section( 'sty_field', esc_html__( 'فیلد جستجو', 'widgetcore' ) );
+			$this->wgcr_typography_control( 'field_typo', '{{WRAPPER}} .wgcr-search .wgcr-search-input' );
+			$this->wgcr_color_control( 'field_color', esc_html__( 'رنگ متن', 'widgetcore' ), '{{WRAPPER}} .wgcr-search .wgcr-search-input', 'color' );
+			$this->wgcr_color_control( 'field_ph_color', esc_html__( 'رنگ متن راهنما', 'widgetcore' ), '{{WRAPPER}} .wgcr-search .wgcr-search-input::placeholder', 'color' );
+			$this->wgcr_color_control( 'field_bg', esc_html__( 'پس‌زمینه', 'widgetcore' ), '{{WRAPPER}} .wgcr-search .wgcr-search-input', 'background-color' );
+			$this->wgcr_border_control( 'field_border', '{{WRAPPER}} .wgcr-search .wgcr-search-input' );
+			$this->wgcr_color_control( 'field_focus_border', esc_html__( 'رنگ کادر (فوکوس)', 'widgetcore' ), '{{WRAPPER}} .wgcr-search .wgcr-search-input:focus', 'border-color' );
 			$this->wgcr_size_control( 'field_radius', array(
 				'label'      => esc_html__( 'گردی گوشه‌ها', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
@@ -511,11 +487,7 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			) );
-			$this->add_control( 'icon_color', array(
-				'label'     => esc_html__( 'رنگ آیکون', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-icon' => 'color:{{VALUE}};' ),
-			) );
+			$this->wgcr_color_control( 'icon_color', esc_html__( 'رنگ آیکون', 'widgetcore' ), '{{WRAPPER}} .wgcr-search .wgcr-search-icon', 'color' );
 			$this->wgcr_size_control( 'icon_size', array(
 				'label'      => esc_html__( 'اندازه آیکون', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
@@ -525,28 +497,16 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 			) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sty_panel', array( 'label' => esc_html__( 'کادر نتایج', 'widgetcore' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ) );
-			$this->add_control( 'panel_bg', array(
-				'label'     => esc_html__( 'پس‌زمینه', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-panel' => 'background-color:{{VALUE}};' ),
-			) );
-			$this->add_group_control( \Elementor\Group_Control_Border::get_type(), array(
-				'name'     => 'panel_border',
-				'label'    => esc_html__( 'کادر', 'widgetcore' ),
-				'selector' => '{{WRAPPER}} .wgcr-search .wgcr-search-panel',
-			) );
+			$this->wgcr_style_section( 'sty_panel', esc_html__( 'کادر نتایج', 'widgetcore' ) );
+			$this->wgcr_color_control( 'panel_bg', esc_html__( 'پس‌زمینه', 'widgetcore' ), '{{WRAPPER}} .wgcr-search .wgcr-search-panel', 'background-color' );
+			$this->wgcr_border_control( 'panel_border', '{{WRAPPER}} .wgcr-search .wgcr-search-panel' );
 			$this->wgcr_size_control( 'panel_radius', array(
 				'label'      => esc_html__( 'گردی گوشه‌ها', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px' ),
 				'selectors'  => array( '{{WRAPPER}} .wgcr-search .wgcr-search-panel' => 'border-radius:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};' ),
 			) );
-			$this->add_group_control( \Elementor\Group_Control_Box_Shadow::get_type(), array(
-				'name'     => 'panel_shadow',
-				'label'    => esc_html__( 'سایه', 'widgetcore' ),
-				'selector' => '{{WRAPPER}} .wgcr-search .wgcr-search-panel',
-			) );
+			$this->wgcr_shadow_control( 'panel_shadow', '{{WRAPPER}} .wgcr-search .wgcr-search-panel' );
 			$this->add_control( 'page_container_heading', array(
 				'label'     => esc_html__( 'کانتینر نتایج (حالت نمایش در صفحه)', 'widgetcore' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
@@ -606,18 +566,8 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 				'selectors'  => array( '{{WRAPPER}} .wgcr-search--page .wgcr-search-panel' => 'margin:{{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};' ),
 				'condition' => array( 'display_mode' => 'page' ),
 			) );
-			$this->add_control( 'page_container_bg', array(
-				'label'     => esc_html__( 'پس‌زمینه', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .wgcr-search--page .wgcr-search-panel' => 'background-color:{{VALUE}};' ),
-				'condition' => array( 'display_mode' => 'page' ),
-			) );
-			$this->add_group_control( \Elementor\Group_Control_Border::get_type(), array(
-				'name'      => 'page_container_border',
-				'label'     => esc_html__( 'کادر', 'widgetcore' ),
-				'selector'  => '{{WRAPPER}} .wgcr-search--page .wgcr-search-panel',
-				'condition' => array( 'display_mode' => 'page' ),
-			) );
+			$this->wgcr_color_control( 'page_container_bg', esc_html__( 'پس‌زمینه', 'widgetcore' ), '{{WRAPPER}} .wgcr-search--page .wgcr-search-panel', 'background-color', array( 'condition' => array( 'display_mode' => 'page' ) ) );
+			$this->wgcr_border_control( 'page_container_border', '{{WRAPPER}} .wgcr-search--page .wgcr-search-panel', array( 'condition' => array( 'display_mode' => 'page' ) ) );
 			$this->wgcr_size_control( 'page_container_radius', array(
 				'label'      => esc_html__( 'گردی گوشه‌ها', 'widgetcore' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
@@ -659,57 +609,18 @@ if ( ! class_exists( 'WGCR_Search_Widget' ) && class_exists( '\Elementor\Widget_
 				),
 				'condition' => array( 'display_mode' => 'page' ),
 			) );
-			$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array(
-				'name'      => 'page_container_typography',
-				'label'     => esc_html__( 'تایپوگرافی وضعیت', 'widgetcore' ),
-				'selector'  => '{{WRAPPER}} .wgcr-search--page .wgcr-search-status',
-				'condition' => array( 'display_mode' => 'page' ),
-			) );
+			$this->wgcr_typography_control( 'page_container_typography', '{{WRAPPER}} .wgcr-search--page .wgcr-search-status', array(), array( 'label' => esc_html__( 'تایپوگرافی وضعیت', 'widgetcore' ), 'condition' => array( 'display_mode' => 'page' ) ) );
 			$this->end_controls_section();
 
-			$this->start_controls_section( 'sty_items', array( 'label' => esc_html__( 'آیتم‌ها', 'widgetcore' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ) );
-			$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array(
-				'name'     => 'title_typo',
-				'label'    => esc_html__( 'تایپوگرافی عنوان', 'widgetcore' ),
-				'selector' => '{{WRAPPER}} .wgcr-search .wgcr-search-title',
-			) );
-			$this->add_control( 'title_color', array(
-				'label'     => esc_html__( 'رنگ عنوان', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-title' => 'color:{{VALUE}};' ),
-			) );
-			$this->add_control( 'item_hover_bg', array(
-				'label'     => esc_html__( 'پس‌زمینه آیتم فعال/هاور', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-link:hover, {{WRAPPER}} .wgcr-search .wgcr-search-item[aria-selected="true"] .wgcr-search-link' => 'background-color:{{VALUE}};' ),
-			) );
-			$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array(
-				'name'      => 'excerpt_typo',
-				'label'     => esc_html__( 'تایپوگرافی خلاصه', 'widgetcore' ),
-				'selector'  => '{{WRAPPER}} .wgcr-search .wgcr-search-excerpt',
-				'separator' => 'before',
-			) );
-			$this->add_control( 'excerpt_color', array(
-				'label'     => esc_html__( 'رنگ خلاصه', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-excerpt, {{WRAPPER}} .wgcr-search .wgcr-search-date' => 'color:{{VALUE}};' ),
-			) );
-			$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array(
-				'name'      => 'all_typo',
-				'label'     => esc_html__( 'تایپوگرافی «نمایش همه»', 'widgetcore' ),
-				'selector'  => '{{WRAPPER}} .wgcr-search .wgcr-search-all',
-				'separator' => 'before',
-			) );
-			$this->add_control( 'all_color', array(
-				'label'     => esc_html__( 'رنگ «نمایش همه»', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-all' => 'color:{{VALUE}};' ),
-			) );
-			$this->add_control( 'all_color_hover', array(
-				'label'     => esc_html__( 'رنگ «نمایش همه» (هاور)', 'widgetcore' ),
-				'type'      => \Elementor\Controls_Manager::COLOR,
-				'selectors' => array( '{{WRAPPER}} .wgcr-search .wgcr-search-all:hover' => 'color:{{VALUE}};' ),
-			) );
+			$this->wgcr_style_section( 'sty_items', esc_html__( 'آیتم‌ها', 'widgetcore' ) );
+			$this->wgcr_typography_control( 'title_typo', '{{WRAPPER}} .wgcr-search .wgcr-search-title', array(), array( 'label' => esc_html__( 'تایپوگرافی عنوان', 'widgetcore' ) ) );
+			$this->wgcr_color_control( 'title_color', esc_html__( 'رنگ عنوان', 'widgetcore' ), '{{WRAPPER}} .wgcr-search .wgcr-search-title', 'color' );
+			$this->wgcr_color_control( 'item_hover_bg', esc_html__( 'پس‌زمینه آیتم فعال/هاور', 'widgetcore' ), '{{WRAPPER}} .wgcr-search .wgcr-search-link:hover, {{WRAPPER}} .wgcr-search .wgcr-search-item[aria-selected="true"] .wgcr-search-link', 'background-color' );
+			$this->wgcr_typography_control( 'excerpt_typo', '{{WRAPPER}} .wgcr-search .wgcr-search-excerpt', array(), array( 'label' => esc_html__( 'تایپوگرافی خلاصه', 'widgetcore' ), 'separator' => 'before' ) );
+			$this->wgcr_color_control( 'excerpt_color', esc_html__( 'رنگ خلاصه', 'widgetcore' ), '{{WRAPPER}} .wgcr-search .wgcr-search-excerpt, {{WRAPPER}} .wgcr-search .wgcr-search-date', 'color' );
+			$this->wgcr_typography_control( 'all_typo', '{{WRAPPER}} .wgcr-search .wgcr-search-all', array(), array( 'label' => esc_html__( 'تایپوگرافی «نمایش همه»', 'widgetcore' ), 'separator' => 'before' ) );
+			$this->wgcr_color_control( 'all_color', esc_html__( 'رنگ «نمایش همه»', 'widgetcore' ), '{{WRAPPER}} .wgcr-search .wgcr-search-all', 'color' );
+			$this->wgcr_color_control( 'all_color_hover', esc_html__( 'رنگ «نمایش همه» (هاور)', 'widgetcore' ), '{{WRAPPER}} .wgcr-search .wgcr-search-all:hover', 'color' );
 			$this->end_controls_section();
 		}
 

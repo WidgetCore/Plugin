@@ -29,15 +29,15 @@ msgstr ""
 msgid "دیدگاه‌ها"
 msgstr ""
 
-#: includes/comments/comments-shared.php:21 widgets/class-comments-widget.php:269
+#: includes/comments/comments-shared.php:21 widgets/class-comments-widget.php:78
 msgid "نام"
 msgstr ""
 
-#: includes/comments/comments-shared.php:25 widgets/class-comments-widget.php:270
+#: includes/comments/comments-shared.php:25 widgets/class-comments-widget.php:79
 msgid "ایمیل"
 msgstr ""
 
-#: includes/comments/comments-shared.php:28 widgets/class-comments-widget.php:271
+#: includes/comments/comments-shared.php:28 widgets/class-comments-widget.php:80
 msgid "وب‌سایت"
 msgstr ""
 
@@ -168,51 +168,87 @@ msgstr ""
 msgid "صفحه %1$d از %2$d"
 msgstr ""
 
-#: includes/search/search-shared.php:130 widgets/class-search-widget.php:781
+#: includes/search/search-shared.php:130 widgets/class-search-widget.php:692
 msgid "جستجو در دوره‌ها…"
 msgstr ""
 
-#: includes/search/search-shared.php:130 widgets/class-search-widget.php:105 widgets/class-search-widget.php:781
+#: includes/search/search-shared.php:130 widgets/class-search-widget.php:105 widgets/class-search-widget.php:692
 msgid "جستجو در مقالات…"
 msgstr ""
 
-#: includes/search/search-shared.php:152 widgets/class-search-widget.php:127 widgets/class-search-widget.php:782
+#: includes/search/search-shared.php:152 widgets/class-search-widget.php:127 widgets/class-search-widget.php:693
 msgid "نمایش همه نتایج"
 msgstr ""
 
-#: includes/search/search-shared.php:164 widgets/class-search-widget.php:379 widgets/class-search-widget.php:808
+#: includes/search/search-shared.php:164 widgets/class-search-widget.php:379 widgets/class-search-widget.php:719
 msgid "مشاهده مقالات بیشتر"
 msgstr ""
 
-#: includes/search/search-shared.php:316 widgets/class-search-widget.php:809
+#: includes/search/search-shared.php:316 widgets/class-search-widget.php:720
 msgid "نوشته‌ی بیشتری موجود نیست."
 msgstr ""
 
-#: includes/search/search-shared.php:329 widgets/class-search-widget.php:824
+#: includes/search/search-shared.php:329 widgets/class-search-widget.php:735
 msgid "نتایج جستجو"
 msgstr ""
 
-#: includes/search/search-shared.php:333 widgets/class-search-widget.php:828
+#: includes/search/search-shared.php:333 widgets/class-search-widget.php:739
 msgid "صفحه‌بندی نتایج"
 msgstr ""
 
-#: includes/style/style-controls.php:33 widgets/class-comments-widget.php:217 widgets/class-comments-widget.php:408 widgets/class-faq-widget.php:689
+#: includes/style/style-controls.php:33 includes/style/style-controls.php:276 widgets/class-comments-widget.php:217 widgets/class-faq-widget.php:566
 msgid "عادی"
 msgstr ""
 
-#: includes/style/style-controls.php:36 widgets/class-comments-widget.php:217
+#: includes/style/style-controls.php:36 includes/style/style-controls.php:276
 msgid "هاور"
 msgstr ""
 
-#: includes/update/github-updater.php:143
+#: includes/style/style-controls.php:64 widgets/class-faq-widget.php:159 widgets/class-faq-widget.php:256 widgets/class-search-widget.php:111 widgets/class-search-widget.php:119 widgets/class-search-widget.php:184 widgets/class-search-widget.php:194 widgets/class-search-widget.php:290 widgets/class-search-widget.php:449
+msgid "بله"
+msgstr ""
+
+#: includes/style/style-controls.php:65 widgets/class-faq-widget.php:160 widgets/class-faq-widget.php:257 widgets/class-search-widget.php:112 widgets/class-search-widget.php:120 widgets/class-search-widget.php:185 widgets/class-search-widget.php:195 widgets/class-search-widget.php:291 widgets/class-search-widget.php:450
+msgid "خیر"
+msgstr ""
+
+#: includes/style/style-controls.php:153
+msgid "تایپوگرافی"
+msgstr ""
+
+#: includes/style/style-controls.php:187
+msgid "کادر"
+msgstr ""
+
+#: includes/style/style-controls.php:204
+msgid "سایه"
+msgstr ""
+
+#: includes/style/style-controls.php:258 widgets/class-comments-widget.php:219 widgets/class-comments-widget.php:224 widgets/class-comments-widget.php:250 widgets/class-comments-widget.php:317 widgets/class-comments-widget.php:329 widgets/class-comments-widget.php:339 widgets/class-faq-widget.php:340 widgets/class-faq-widget.php:349 widgets/class-faq-widget.php:437 widgets/class-faq-widget.php:441 widgets/class-faq-widget.php:567 widgets/class-faq-widget.php:571 widgets/class-search-widget.php:470 widgets/class-search-widget.php:501 widgets/class-search-widget.php:569
+msgid "پس‌زمینه"
+msgstr ""
+
+#: includes/style/style-controls.php:260 widgets/class-comments-widget.php:230 widgets/class-comments-widget.php:255 widgets/class-comments-widget.php:267 widgets/class-comments-widget.php:321 widgets/class-comments-widget.php:333 widgets/class-comments-widget.php:341 widgets/class-faq-widget.php:371 widgets/class-faq-widget.php:448 widgets/class-search-widget.php:474 widgets/class-search-widget.php:504 widgets/class-search-widget.php:572
+msgid "گردی گوشه‌ها"
+msgstr ""
+
+#: includes/style/style-controls.php:263 widgets/class-comments-widget.php:231 widgets/class-comments-widget.php:256 widgets/class-comments-widget.php:322 widgets/class-comments-widget.php:342
+msgid "فاصلهٔ داخلی"
+msgstr ""
+
+#: includes/style/style-controls.php:269 widgets/class-comments-widget.php:193 widgets/class-comments-widget.php:200 widgets/class-comments-widget.php:209 widgets/class-comments-widget.php:238 widgets/class-comments-widget.php:298 widgets/class-comments-widget.php:303 widgets/class-comments-widget.php:316 widgets/class-comments-widget.php:328 widgets/class-comments-widget.php:338
+msgid "رنگ"
+msgstr ""
+
+#: includes/update/github-updater.php:248
 msgid "بررسی به‌روزرسانی"
 msgstr ""
 
-#: includes/update/github-updater.php:174
+#: includes/update/github-updater.php:279
 msgid "نسخه‌ی جدیدی از WidgetCore موجود است؛ می‌توانید همین‌جا به‌روزرسانی کنید."
 msgstr ""
 
-#: includes/update/github-updater.php:176
+#: includes/update/github-updater.php:281
 msgid "WidgetCore به‌روز است؛ نسخه‌ی نصب‌شده آخرین نسخه‌ی منتشرشده است."
 msgstr ""
 
@@ -236,391 +272,355 @@ msgstr ""
 msgid "کامنت"
 msgstr ""
 
-#: widgets/class-comments-widget.php:26 widgets/class-faq-widget.php:159 widgets/class-faq-widget.php:256 widgets/class-search-widget.php:111 widgets/class-search-widget.php:119 widgets/class-search-widget.php:184 widgets/class-search-widget.php:194 widgets/class-search-widget.php:290 widgets/class-search-widget.php:449
-msgid "بله"
-msgstr ""
-
-#: widgets/class-comments-widget.php:27 widgets/class-faq-widget.php:160 widgets/class-faq-widget.php:257 widgets/class-search-widget.php:112 widgets/class-search-widget.php:120 widgets/class-search-widget.php:185 widgets/class-search-widget.php:195 widgets/class-search-widget.php:291 widgets/class-search-widget.php:450
-msgid "خیر"
-msgstr ""
-
-#: widgets/class-comments-widget.php:89
+#: widgets/class-comments-widget.php:23
 msgid "نمایش فیلد"
 msgstr ""
 
-#: widgets/class-comments-widget.php:93
+#: widgets/class-comments-widget.php:27
 msgid "اجباری"
 msgstr ""
 
-#: widgets/class-comments-widget.php:95
+#: widgets/class-comments-widget.php:29
 msgid "برچسب"
 msgstr ""
 
-#: widgets/class-comments-widget.php:97 widgets/class-search-widget.php:102
+#: widgets/class-comments-widget.php:31 widgets/class-search-widget.php:102
 msgid "متن راهنما"
 msgstr ""
 
-#: widgets/class-comments-widget.php:99
+#: widgets/class-comments-widget.php:33
 msgid "ترتیب نمایش"
 msgstr ""
 
-#: widgets/class-comments-widget.php:128 widgets/class-faq-widget.php:472 widgets/class-faq-widget.php:554 widgets/class-search-widget.php:469
-msgid "تایپوگرافی"
-msgstr ""
-
-#: widgets/class-comments-widget.php:181 widgets/class-faq-widget.php:348 widgets/class-faq-widget.php:567 widgets/class-search-widget.php:489 widgets/class-search-widget.php:536 widgets/class-search-widget.php:617
-msgid "کادر"
-msgstr ""
-
-#: widgets/class-comments-widget.php:192 widgets/class-faq-widget.php:367 widgets/class-faq-widget.php:386 widgets/class-faq-widget.php:440 widgets/class-faq-widget.php:459 widgets/class-search-widget.php:547
-msgid "سایه"
-msgstr ""
-
-#: widgets/class-comments-widget.php:199 widgets/class-comments-widget.php:410 widgets/class-comments-widget.php:415 widgets/class-comments-widget.php:441 widgets/class-comments-widget.php:508 widgets/class-comments-widget.php:520 widgets/class-comments-widget.php:530 widgets/class-faq-widget.php:341 widgets/class-faq-widget.php:373 widgets/class-faq-widget.php:525 widgets/class-faq-widget.php:539 widgets/class-faq-widget.php:691 widgets/class-faq-widget.php:705 widgets/class-search-widget.php:483 widgets/class-search-widget.php:530 widgets/class-search-widget.php:610
-msgid "پس‌زمینه"
-msgstr ""
-
-#: widgets/class-comments-widget.php:201 widgets/class-comments-widget.php:421 widgets/class-comments-widget.php:446 widgets/class-comments-widget.php:458 widgets/class-comments-widget.php:512 widgets/class-comments-widget.php:524 widgets/class-comments-widget.php:532 widgets/class-faq-widget.php:408 widgets/class-faq-widget.php:571 widgets/class-search-widget.php:498 widgets/class-search-widget.php:540 widgets/class-search-widget.php:622
-msgid "گردی گوشه‌ها"
-msgstr ""
-
-#: widgets/class-comments-widget.php:204 widgets/class-comments-widget.php:422 widgets/class-comments-widget.php:447 widgets/class-comments-widget.php:513 widgets/class-comments-widget.php:533
-msgid "فاصلهٔ داخلی"
-msgstr ""
-
-#: widgets/class-comments-widget.php:210 widgets/class-comments-widget.php:384 widgets/class-comments-widget.php:391 widgets/class-comments-widget.php:400 widgets/class-comments-widget.php:429 widgets/class-comments-widget.php:489 widgets/class-comments-widget.php:494 widgets/class-comments-widget.php:507 widgets/class-comments-widget.php:519 widgets/class-comments-widget.php:529
-msgid "رنگ"
-msgstr ""
-
-#: widgets/class-comments-widget.php:231
+#: widgets/class-comments-widget.php:40
 msgid "فرم دیدگاه"
 msgstr ""
 
-#: widgets/class-comments-widget.php:232
+#: widgets/class-comments-widget.php:41
 msgid "نمایش فرم"
 msgstr ""
 
-#: widgets/class-comments-widget.php:233 widgets/class-comments-widget.php:390
+#: widgets/class-comments-widget.php:42 widgets/class-comments-widget.php:199
 msgid "عنوان فرم"
 msgstr ""
 
-#: widgets/class-comments-widget.php:236
+#: widgets/class-comments-widget.php:45
 msgid "تگ عنوان فرم"
 msgstr ""
 
-#: widgets/class-comments-widget.php:246
+#: widgets/class-comments-widget.php:55
 msgid "یادداشت بالای فیلدها"
 msgstr ""
 
-#: widgets/class-comments-widget.php:247
+#: widgets/class-comments-widget.php:56
 msgid "یادداشت زیر فیلدها"
 msgstr ""
 
-#: widgets/class-comments-widget.php:248
+#: widgets/class-comments-widget.php:57
 msgid "متن دکمه ارسال"
 msgstr ""
 
-#: widgets/class-comments-widget.php:249
+#: widgets/class-comments-widget.php:58
 msgid "متن لغو پاسخ"
 msgstr ""
 
-#: widgets/class-comments-widget.php:250
+#: widgets/class-comments-widget.php:59
 msgid "فقط کاربران واردشده"
 msgstr ""
 
-#: widgets/class-comments-widget.php:256 widgets/class-comments-widget.php:405
+#: widgets/class-comments-widget.php:65 widgets/class-comments-widget.php:214
 msgid "فیلدها"
 msgstr ""
 
-#: widgets/class-comments-widget.php:262
+#: widgets/class-comments-widget.php:71
 msgid "چیدمان نام، ایمیل و وب‌سایت"
 msgstr ""
 
-#: widgets/class-comments-widget.php:264
+#: widgets/class-comments-widget.php:73
 msgid "کنار هم"
 msgstr ""
 
-#: widgets/class-comments-widget.php:265
+#: widgets/class-comments-widget.php:74
 msgid "زیر هم"
 msgstr ""
 
-#: widgets/class-comments-widget.php:272 widgets/class-comments-widget.php:426
+#: widgets/class-comments-widget.php:81 widgets/class-comments-widget.php:235
 msgid "تیک ذخیره در مرورگر"
 msgstr ""
 
-#: widgets/class-comments-widget.php:273 widgets/class-comments-widget.php:498
+#: widgets/class-comments-widget.php:82 widgets/class-comments-widget.php:307
 msgid "متن دیدگاه"
 msgstr ""
 
-#: widgets/class-comments-widget.php:274
+#: widgets/class-comments-widget.php:83
 msgid "تعداد سطرهای متن دیدگاه"
 msgstr ""
 
-#: widgets/class-comments-widget.php:277
+#: widgets/class-comments-widget.php:86
 msgid "فهرست دیدگاه‌ها"
 msgstr ""
 
-#: widgets/class-comments-widget.php:278
+#: widgets/class-comments-widget.php:87
 msgid "نمایش فهرست"
 msgstr ""
 
-#: widgets/class-comments-widget.php:279 widgets/class-comments-widget.php:383
+#: widgets/class-comments-widget.php:88 widgets/class-comments-widget.php:192
 msgid "عنوان فهرست"
 msgstr ""
 
-#: widgets/class-comments-widget.php:282
+#: widgets/class-comments-widget.php:91
 msgid "تگ عنوان فهرست"
 msgstr ""
 
-#: widgets/class-comments-widget.php:292
+#: widgets/class-comments-widget.php:101
 msgid "نمایش تعداد دیدگاه‌ها"
 msgstr ""
 
-#: widgets/class-comments-widget.php:293
+#: widgets/class-comments-widget.php:102
 msgid "تعداد در هر صفحه (0 = طبق وردپرس)"
 msgstr ""
 
-#: widgets/class-comments-widget.php:296
+#: widgets/class-comments-widget.php:105
 msgid "ترتیب فهرست"
 msgstr ""
 
-#: widgets/class-comments-widget.php:298 widgets/class-comments-widget.php:308
+#: widgets/class-comments-widget.php:107 widgets/class-comments-widget.php:117
 msgid "طبق تنظیمات وردپرس"
 msgstr ""
 
-#: widgets/class-comments-widget.php:299
+#: widgets/class-comments-widget.php:108
 msgid "قدیمی‌ترین اول"
 msgstr ""
 
-#: widgets/class-comments-widget.php:300
+#: widgets/class-comments-widget.php:109
 msgid "جدیدترین اول"
 msgstr ""
 
-#: widgets/class-comments-widget.php:306 widgets/class-comments-widget.php:457
+#: widgets/class-comments-widget.php:115 widgets/class-comments-widget.php:266
 msgid "آواتار"
 msgstr ""
 
-#: widgets/class-comments-widget.php:309 widgets/class-search-widget.php:388
+#: widgets/class-comments-widget.php:118 widgets/class-search-widget.php:388
 msgid "نمایش"
 msgstr ""
 
-#: widgets/class-comments-widget.php:310
+#: widgets/class-comments-widget.php:119
 msgid "عدم نمایش"
 msgstr ""
 
-#: widgets/class-comments-widget.php:314
+#: widgets/class-comments-widget.php:123
 msgid "اندازهٔ آواتار"
 msgstr ""
 
-#: widgets/class-comments-widget.php:315
+#: widgets/class-comments-widget.php:124
 msgid "نمایش تاریخ"
 msgstr ""
 
-#: widgets/class-comments-widget.php:316
+#: widgets/class-comments-widget.php:125
 msgid "نمایش لینک پاسخ"
 msgstr ""
 
-#: widgets/class-comments-widget.php:317
+#: widgets/class-comments-widget.php:126
 msgid "متن لینک پاسخ"
 msgstr ""
 
-#: widgets/class-comments-widget.php:320 widgets/class-comments-widget.php:527
+#: widgets/class-comments-widget.php:129 widgets/class-comments-widget.php:336
 msgid "پیام‌ها"
 msgstr ""
 
-#: widgets/class-comments-widget.php:321
+#: widgets/class-comments-widget.php:130
 msgid "پیام فهرست خالی"
 msgstr ""
 
-#: widgets/class-comments-widget.php:322
+#: widgets/class-comments-widget.php:131
 msgid "پیام در انتظار تأیید"
 msgstr ""
 
-#: widgets/class-comments-widget.php:323
+#: widgets/class-comments-widget.php:132
 msgid "پیام بسته بودن دیدگاه‌ها"
 msgstr ""
 
-#: widgets/class-comments-widget.php:324
+#: widgets/class-comments-widget.php:133
 msgid "پیام نیاز به ورود"
 msgstr ""
 
-#: widgets/class-comments-widget.php:325 widgets/class-comments-widget.php:537
+#: widgets/class-comments-widget.php:134 widgets/class-comments-widget.php:346
 msgid "متن کاربر واردشده"
 msgstr ""
 
-#: widgets/class-comments-widget.php:326
+#: widgets/class-comments-widget.php:135
 msgid "نمایش متن کاربر واردشده"
 msgstr ""
 
-#: widgets/class-comments-widget.php:330
+#: widgets/class-comments-widget.php:139
 msgid "متن"
 msgstr ""
 
-#: widgets/class-comments-widget.php:331
+#: widgets/class-comments-widget.php:140
 msgid "برای نمایش نام کاربر، {name} را در متن بنویسید. این متن فقط به کاربر واردشده نشان داده می‌شود."
 msgstr ""
 
-#: widgets/class-comments-widget.php:345
+#: widgets/class-comments-widget.php:154
 msgid "نمایش لینک ویرایش نمایه"
 msgstr ""
 
-#: widgets/class-comments-widget.php:346
+#: widgets/class-comments-widget.php:155
 msgid "متن لینک ویرایش نمایه"
 msgstr ""
 
-#: widgets/class-comments-widget.php:347
+#: widgets/class-comments-widget.php:156
 msgid "نمایش لینک خروج"
 msgstr ""
 
-#: widgets/class-comments-widget.php:348
+#: widgets/class-comments-widget.php:157
 msgid "متن لینک خروج"
 msgstr ""
 
-#: widgets/class-comments-widget.php:351 widgets/class-faq-widget.php:264
+#: widgets/class-comments-widget.php:160 widgets/class-faq-widget.php:264
 msgid "طرح کلی"
 msgstr ""
 
-#: widgets/class-comments-widget.php:352 widgets/class-faq-widget.php:266
+#: widgets/class-comments-widget.php:161 widgets/class-faq-widget.php:266
 msgid "حداکثر عرض"
 msgstr ""
 
-#: widgets/class-comments-widget.php:356 widgets/class-faq-widget.php:295
+#: widgets/class-comments-widget.php:165 widgets/class-faq-widget.php:295
 msgid "تراز افقی ویجت"
 msgstr ""
 
-#: widgets/class-comments-widget.php:360 widgets/class-faq-widget.php:299 widgets/class-search-widget.php:326 widgets/class-search-widget.php:419 widgets/class-search-widget.php:633
+#: widgets/class-comments-widget.php:169 widgets/class-faq-widget.php:299 widgets/class-search-widget.php:326 widgets/class-search-widget.php:419 widgets/class-search-widget.php:583
 msgid "راست"
 msgstr ""
 
-#: widgets/class-comments-widget.php:364 widgets/class-faq-widget.php:303 widgets/class-search-widget.php:330 widgets/class-search-widget.php:423 widgets/class-search-widget.php:637
+#: widgets/class-comments-widget.php:173 widgets/class-faq-widget.php:303 widgets/class-search-widget.php:330 widgets/class-search-widget.php:423 widgets/class-search-widget.php:587
 msgid "وسط"
 msgstr ""
 
-#: widgets/class-comments-widget.php:368 widgets/class-faq-widget.php:307 widgets/class-search-widget.php:334 widgets/class-search-widget.php:427 widgets/class-search-widget.php:641
+#: widgets/class-comments-widget.php:177 widgets/class-faq-widget.php:307 widgets/class-search-widget.php:334 widgets/class-search-widget.php:427 widgets/class-search-widget.php:591
 msgid "چپ"
 msgstr ""
 
-#: widgets/class-comments-widget.php:380
+#: widgets/class-comments-widget.php:189
 msgid "فاصلهٔ فهرست و فرم"
 msgstr ""
 
-#: widgets/class-comments-widget.php:386
+#: widgets/class-comments-widget.php:195
 msgid "رنگ شمارنده"
 msgstr ""
 
-#: widgets/class-comments-widget.php:387
+#: widgets/class-comments-widget.php:196
 msgid "فاصله تا فهرست"
 msgstr ""
 
-#: widgets/class-comments-widget.php:395
+#: widgets/class-comments-widget.php:204
 msgid "کارت فرم"
 msgstr ""
 
-#: widgets/class-comments-widget.php:399
+#: widgets/class-comments-widget.php:208
 msgid "برچسب‌ها"
 msgstr ""
 
-#: widgets/class-comments-widget.php:402
+#: widgets/class-comments-widget.php:211
 msgid "رنگ ستارهٔ اجباری"
 msgstr ""
 
-#: widgets/class-comments-widget.php:409 widgets/class-comments-widget.php:440 widgets/class-comments-widget.php:539 widgets/class-faq-widget.php:433 widgets/class-faq-widget.php:452 widgets/class-faq-widget.php:531 widgets/class-faq-widget.php:545 widgets/class-search-widget.php:473
+#: widgets/class-comments-widget.php:218 widgets/class-comments-widget.php:249 widgets/class-comments-widget.php:348 widgets/class-faq-widget.php:390 widgets/class-faq-widget.php:395 widgets/class-faq-widget.php:438 widgets/class-faq-widget.php:442 widgets/class-search-widget.php:468
 msgid "رنگ متن"
 msgstr ""
 
-#: widgets/class-comments-widget.php:411 widgets/class-search-widget.php:478
+#: widgets/class-comments-widget.php:220 widgets/class-search-widget.php:469
 msgid "رنگ متن راهنما"
 msgstr ""
 
-#: widgets/class-comments-widget.php:414
+#: widgets/class-comments-widget.php:223
 msgid "فوکوس"
 msgstr ""
 
-#: widgets/class-comments-widget.php:416 widgets/class-comments-widget.php:442 widgets/class-faq-widget.php:379
+#: widgets/class-comments-widget.php:225 widgets/class-comments-widget.php:251 widgets/class-faq-widget.php:350
 msgid "رنگ کادر"
 msgstr ""
 
-#: widgets/class-comments-widget.php:423
+#: widgets/class-comments-widget.php:232
 msgid "فاصلهٔ بین فیلدها"
 msgstr ""
 
-#: widgets/class-comments-widget.php:428
+#: widgets/class-comments-widget.php:237
 msgid "یادداشت‌های فرم"
 msgstr ""
 
-#: widgets/class-comments-widget.php:433
+#: widgets/class-comments-widget.php:242
 msgid "دکمه ارسال"
 msgstr ""
 
-#: widgets/class-comments-widget.php:451
+#: widgets/class-comments-widget.php:260
 msgid "کارت دیدگاه"
 msgstr ""
 
-#: widgets/class-comments-widget.php:453
+#: widgets/class-comments-widget.php:262
 msgid "فاصلهٔ بین دیدگاه‌ها"
 msgstr ""
 
-#: widgets/class-comments-widget.php:454
+#: widgets/class-comments-widget.php:263
 msgid "تورفتگی و فاصلهٔ پاسخ‌ها"
 msgstr ""
 
-#: widgets/class-comments-widget.php:463
+#: widgets/class-comments-widget.php:272
 msgid "عرض آواتار"
 msgstr ""
 
-#: widgets/class-comments-widget.php:464
+#: widgets/class-comments-widget.php:273
 msgid "برای تصویر واضح‌تر، «اندازهٔ آواتار» را در تب محتوا هم زیاد کنید."
 msgstr ""
 
-#: widgets/class-comments-widget.php:484
+#: widgets/class-comments-widget.php:293
 msgid "فاصله از کارت دیدگاه"
 msgstr ""
 
-#: widgets/class-comments-widget.php:487
+#: widgets/class-comments-widget.php:296
 msgid "نام نویسنده"
 msgstr ""
 
-#: widgets/class-comments-widget.php:491 widgets/class-comments-widget.php:496
+#: widgets/class-comments-widget.php:300 widgets/class-comments-widget.php:305
 msgid "فاصله از آواتار"
 msgstr ""
 
-#: widgets/class-comments-widget.php:493 widgets/class-search-widget.php:250 widgets/class-search-widget.php:267
+#: widgets/class-comments-widget.php:302 widgets/class-search-widget.php:250 widgets/class-search-widget.php:267
 msgid "تاریخ"
 msgstr ""
 
-#: widgets/class-comments-widget.php:500
+#: widgets/class-comments-widget.php:309
 msgid "لینک پاسخ"
 msgstr ""
 
-#: widgets/class-comments-widget.php:516 widgets/class-search-widget.php:306 widgets/class-search-widget.php:308
+#: widgets/class-comments-widget.php:325 widgets/class-search-widget.php:306 widgets/class-search-widget.php:308
 msgid "صفحه‌بندی"
 msgstr ""
 
-#: widgets/class-comments-widget.php:521
+#: widgets/class-comments-widget.php:330
 msgid "رنگ در حالت هاور"
 msgstr ""
 
-#: widgets/class-comments-widget.php:522
+#: widgets/class-comments-widget.php:331
 msgid "رنگ صفحهٔ جاری"
 msgstr ""
 
-#: widgets/class-comments-widget.php:523
+#: widgets/class-comments-widget.php:332
 msgid "پس‌زمینهٔ صفحهٔ جاری"
 msgstr ""
 
-#: widgets/class-comments-widget.php:534
+#: widgets/class-comments-widget.php:343
 msgid "رنگ پیام در انتظار تأیید"
 msgstr ""
 
-#: widgets/class-comments-widget.php:541
+#: widgets/class-comments-widget.php:350
 msgid "رنگ لینک‌ها"
 msgstr ""
 
-#: widgets/class-comments-widget.php:542
+#: widgets/class-comments-widget.php:351
 msgid "رنگ لینک‌ها در حالت هاور"
 msgstr ""
 
-#: widgets/class-comments-widget.php:545
+#: widgets/class-comments-widget.php:354
 msgid "فاصله از اطراف"
 msgstr ""
 
@@ -660,7 +660,7 @@ msgstr ""
 msgid "باز بودن پیش‌فرض"
 msgstr ""
 
-#: widgets/class-faq-widget.php:165 widgets/class-search-widget.php:670
+#: widgets/class-faq-widget.php:165 widgets/class-search-widget.php:615
 msgid "آیتم‌ها"
 msgstr ""
 
@@ -720,7 +720,7 @@ msgstr ""
 msgid "آزاد (چند آیتم همزمان)"
 msgstr ""
 
-#: widgets/class-faq-widget.php:206 widgets/class-faq-widget.php:602 widgets/class-search-widget.php:510
+#: widgets/class-faq-widget.php:206 widgets/class-faq-widget.php:479 widgets/class-search-widget.php:486
 msgid "آیکون"
 msgstr ""
 
@@ -776,71 +776,71 @@ msgstr ""
 msgid "بدنه کارت"
 msgstr ""
 
-#: widgets/class-faq-widget.php:339 widgets/class-faq-widget.php:425 widgets/class-faq-widget.php:523
+#: widgets/class-faq-widget.php:339 widgets/class-faq-widget.php:388 widgets/class-faq-widget.php:436
 msgid "بسته"
 msgstr ""
 
-#: widgets/class-faq-widget.php:371 widgets/class-faq-widget.php:444 widgets/class-faq-widget.php:537
+#: widgets/class-faq-widget.php:348 widgets/class-faq-widget.php:393 widgets/class-faq-widget.php:440
 msgid "باز"
 msgstr ""
 
-#: widgets/class-faq-widget.php:392
+#: widgets/class-faq-widget.php:355
 msgid "میزان تاری شیشه‌ای"
 msgstr ""
 
-#: widgets/class-faq-widget.php:423 widgets/class-search-widget.php:268
+#: widgets/class-faq-widget.php:386 widgets/class-search-widget.php:268
 msgid "عنوان"
 msgstr ""
 
-#: widgets/class-faq-widget.php:427 widgets/class-faq-widget.php:446
+#: widgets/class-faq-widget.php:389 widgets/class-faq-widget.php:394
 msgid "پس‌زمینه ردیف عنوان"
 msgstr ""
 
-#: widgets/class-faq-widget.php:465
+#: widgets/class-faq-widget.php:399
 msgid "رنگ متن (هاور)"
 msgstr ""
 
-#: widgets/class-faq-widget.php:486
+#: widgets/class-faq-widget.php:401
 msgid "کادر ردیف عنوان"
 msgstr ""
 
-#: widgets/class-faq-widget.php:490
+#: widgets/class-faq-widget.php:403
 msgid "گردی گوشه‌های ردیف عنوان"
 msgstr ""
 
-#: widgets/class-faq-widget.php:506 widgets/class-faq-widget.php:587 widgets/class-search-widget.php:504 widgets/class-search-widget.php:596
+#: widgets/class-faq-widget.php:419 widgets/class-faq-widget.php:464 widgets/class-search-widget.php:480 widgets/class-search-widget.php:556
 msgid "پدینگ"
 msgstr ""
 
-#: widgets/class-faq-widget.php:521
+#: widgets/class-faq-widget.php:434
 msgid "کارت توضیحات"
 msgstr ""
 
-#: widgets/class-faq-widget.php:604
+#: widgets/class-faq-widget.php:481
 msgid "فاصله از متن"
 msgstr ""
 
-#: widgets/class-faq-widget.php:620
+#: widgets/class-faq-widget.php:497
 msgid "اندازه باکس"
 msgstr ""
 
-#: widgets/class-faq-widget.php:636 widgets/class-search-widget.php:520
+#: widgets/class-faq-widget.php:513 widgets/class-search-widget.php:492
 msgid "اندازه آیکون"
 msgstr ""
 
-#: widgets/class-faq-widget.php:655
+#: widgets/class-faq-widget.php:532
 msgid "گردی باکس"
 msgstr ""
 
-#: widgets/class-faq-widget.php:671
+#: widgets/class-faq-widget.php:548
 msgid "چرخش آیکون سفارشی در حالت باز (درجه)"
 msgstr ""
 
-#: widgets/class-faq-widget.php:697 widgets/class-faq-widget.php:711 widgets/class-search-widget.php:515
+#: widgets/class-faq-widget.php:568 widgets/class-faq-widget.php:572 widgets/class-search-widget.php:490
 msgid "رنگ آیکون"
 msgstr ""
 
-#: widgets/class-faq-widget.php:703
+#: widgets/class-faq-widget.php:570
 msgid "حالت باز"
 msgstr ""
 
@@ -1108,7 +1108,7 @@ msgstr ""
 msgid "چیدمان"
 msgstr ""
 
-#: widgets/class-search-widget.php:338 widgets/class-search-widget.php:431 widgets/class-search-widget.php:645
+#: widgets/class-search-widget.php:338 widgets/class-search-widget.php:431 widgets/class-search-widget.php:595
 msgid "کشیده"
 msgstr ""
 
@@ -1164,71 +1164,71 @@ msgstr ""
 msgid "فیلد جستجو"
 msgstr ""
 
-#: widgets/class-search-widget.php:493
+#: widgets/class-search-widget.php:472
 msgid "رنگ کادر (فوکوس)"
 msgstr ""
 
-#: widgets/class-search-widget.php:528
+#: widgets/class-search-widget.php:500
 msgid "کادر نتایج"
 msgstr ""
 
-#: widgets/class-search-widget.php:551
+#: widgets/class-search-widget.php:511
 msgid "کانتینر نتایج (حالت نمایش در صفحه)"
 msgstr ""
 
-#: widgets/class-search-widget.php:557
+#: widgets/class-search-widget.php:517
 msgid "عرض"
 msgstr ""
 
-#: widgets/class-search-widget.php:571
+#: widgets/class-search-widget.php:531
 msgid "حداقل ارتفاع"
 msgstr ""
 
-#: widgets/class-search-widget.php:584
+#: widgets/class-search-widget.php:544
 msgid "حداکثر ارتفاع"
 msgstr ""
 
-#: widgets/class-search-widget.php:603
+#: widgets/class-search-widget.php:563
 msgid "مارجین"
 msgstr ""
 
-#: widgets/class-search-widget.php:629
+#: widgets/class-search-widget.php:579
 msgid "تراز افقی"
 msgstr ""
 
-#: widgets/class-search-widget.php:664
+#: widgets/class-search-widget.php:612
 msgid "تایپوگرافی وضعیت"
 msgstr ""
 
-#: widgets/class-search-widget.php:673
+#: widgets/class-search-widget.php:616
 msgid "تایپوگرافی عنوان"
 msgstr ""
 
-#: widgets/class-search-widget.php:677
+#: widgets/class-search-widget.php:617
 msgid "رنگ عنوان"
 msgstr ""
 
-#: widgets/class-search-widget.php:682
+#: widgets/class-search-widget.php:618
 msgid "پس‌زمینه آیتم فعال/هاور"
 msgstr ""
 
-#: widgets/class-search-widget.php:688
+#: widgets/class-search-widget.php:619
 msgid "تایپوگرافی خلاصه"
 msgstr ""
 
-#: widgets/class-search-widget.php:693
+#: widgets/class-search-widget.php:620
 msgid "رنگ خلاصه"
 msgstr ""
 
-#: widgets/class-search-widget.php:699
+#: widgets/class-search-widget.php:621
 msgid "تایپوگرافی «نمایش همه»"
 msgstr ""
 
-#: widgets/class-search-widget.php:704
+#: widgets/class-search-widget.php:622
 msgid "رنگ «نمایش همه»"
 msgstr ""
 
-#: widgets/class-search-widget.php:709
+#: widgets/class-search-widget.php:623
 msgid "رنگ «نمایش همه» (هاور)"
 msgstr ""
 
