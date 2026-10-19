@@ -2,6 +2,8 @@
 افزونه رایگان و متن‌باز وردپرس برای المنتور که ویجت‌های کاربردی، سبک و در دسترس‌پذیر به پنل اضافه می‌کند. بدون صفحه تنظیمات، بدون ذخیره داده در دیتابیس و بدون هیچ درخواست خارجی.
 <br>
 <br>
+**‌ ‌ ‌ ‌ - [مستندات افزونه ویجت کور](https://docs.widgetcore.ir)**
+<br>
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-GPL%20v2-yellow?style=flat-square" alt="License: GPLv2" />
@@ -11,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://widgetcore.ir/">
+  <a href="https://docs.widgetcore.ir/">
     <img src="https://img.shields.io/badge/Documents-black?style=flat-square&logo=google-chrome&logoColor=lightgreen" alt="Website" />
   </a>
   <img src="https://img.shields.io/github/last-commit/WidgetCore/Plugin?style=flat-square" alt="Last commit" />
